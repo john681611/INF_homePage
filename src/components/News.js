@@ -1,9 +1,13 @@
 import React from 'react'
  
-const Nav = (props) => {
+const News = (props) => {
   return (
-    <div>Bla</div>
+    <section id="news" class="section">
+    <div class="section__inner">
+      News
+    </div>
+  </section>
   )
 }
  
-export default Nav
+export default News

@@ -1,9 +1,13 @@
 import React from 'react'
  
-const Header = (props) => {
+const Donators = (props) => {
   return (
-    <div>Bla</div>
+    <section id="donators" class="section">
+    <div class="section__inner">
+      Donators
+    </div>
+  </section>
   )
 }
  
-export default Header
+export default Donators

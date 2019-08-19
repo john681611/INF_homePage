@@ -20,68 +20,17 @@ function App() {
     <div>
       <Nav />
       <Header />
-
-      <section id="news" class="section">
-        <div class="section__inner">
-          <News />
-        </div>
-      </section>
-
-
+      <News />
       <Forum />
-
-
       <About />
-
-
-      <section id="join" class="section">
-        <div class="section__inner">
-          <Join />
-        </div>
-      </section>
-
-      <section id="servers" class="section">
-        <div class="section__inner">
-          <Servers />
-        </div>
-      </section>
-
-      <section id="rules" class="section">
-        <div class="section__inner">
-          <Rules />
-        </div>
-      </section>
-
-      <section id="links" class="section">
-        <div class="section__inner">
-          <Links />
-        </div>
-      </section>
-
-      <section id="cmdmsg" class="section">
-        <div class="section__inner">
-          <CMDmsg />
-        </div>
-      </section>
-
-      <section id="roster" class="section">
-        <div class="section__inner">
-          <Roster />
-        </div>
-      </section>
-
-      <section id="donate" class="section">
-        <div class="section__inner">
-          <Donate />
-        </div>
-      </section>
-
-      <section id="donators" class="section">
-        <div class="section__inner">
-          <Donators />
-        </div>
-      </section>
-
+      <Join />
+      <Servers />
+      <Rules />
+      <Links />
+      <CMDmsg />
+      <Roster />
+      <Donate />
+      <Donators />
       <Footer />
     </div>
   );
