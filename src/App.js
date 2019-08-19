@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Nav from './components/Nav';
 import Header from './components/Header';
@@ -19,76 +18,71 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div>
-      <Nav/>
-      <Header/>
+      <Nav />
+      <Header />
 
       <section id="news" class="section">
-          <div class="section__inner">
-              <News/>
-          </div>
+        <div class="section__inner">
+          <News />
+        </div>
       </section>
 
-      <section id="forum" class="section">
-          <div class="section__inner">
-              <Forum/>
-          </div>
-      </section>
 
-      <section id="about" class="section">
-          <div class="section__inner">
-              <About/>
-          </div>
-      </section>
+      <Forum />
+
+
+      <About />
+
 
       <section id="join" class="section">
-          <div class="section__inner">
-            <Join/>
-          </div>
+        <div class="section__inner">
+          <Join />
+        </div>
       </section>
 
       <section id="servers" class="section">
-          <div class="section__inner">
-              <Servers/>
-          </div>
+        <div class="section__inner">
+          <Servers />
+        </div>
       </section>
 
       <section id="rules" class="section">
-          <div class="section__inner">
-            <Rules/>
-          </div>
+        <div class="section__inner">
+          <Rules />
+        </div>
       </section>
 
       <section id="links" class="section">
-          <div class="section__inner">
-            <Links/>
-          </div>
+        <div class="section__inner">
+          <Links />
+        </div>
       </section>
 
       <section id="cmdmsg" class="section">
-          <div class="section__inner">
-            <CMDmsg/>
-          </div>
+        <div class="section__inner">
+          <CMDmsg />
+        </div>
       </section>
 
       <section id="roster" class="section">
-          <div class="section__inner">
-            <Roster/>
-          </div>
+        <div class="section__inner">
+          <Roster />
+        </div>
       </section>
 
       <section id="donate" class="section">
-          <div class="section__inner">
-            <Donate/>
-          </div>
+        <div class="section__inner">
+          <Donate />
+        </div>
       </section>
 
       <section id="donators" class="section">
-          <div class="section__inner">
-              <Donators/>
-          </div>
+        <div class="section__inner">
+          <Donators />
+        </div>
       </section>
-    
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }
