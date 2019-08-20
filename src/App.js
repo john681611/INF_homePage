@@ -14,6 +14,7 @@ import Donate from './components/Donate';
 import Donators from './components/Donators';
 import Roster from './components/Roster';
 import Footer from './components/Footer';
+import HttpsRedirect from 'react-https-redirect';
 
 class App extends Component {
   constructor(props){
@@ -36,7 +37,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <HttpsRedirect>
         <Nav />
         <Header />
         <News news={this.state.news} />
@@ -51,7 +52,7 @@ class App extends Component {
         <Donate />
         <Donators donators={this.state.donators} />
         <Footer />
-      </div>
+      </HttpsRedirect>
     );
   }
 }
