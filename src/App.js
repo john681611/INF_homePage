@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Nav from './components/Nav';
 import Header from './components/Header';
@@ -14,26 +14,44 @@ import Donate from './components/Donate';
 import Donators from './components/Donators';
 import Roster from './components/Roster';
 import Footer from './components/Footer';
+import mockData from './mockData';
 
-function App() {
-  return (
-    <div>
-      <Nav />
-      <Header />
-      <News />
-      <Forum />
-      <About />
-      <Join />
-      <Servers />
-      <Rules />
-      <Links />
-      <CMDmsg />
-      <Roster />
-      <Donate />
-      <Donators />
-      <Footer />
-    </div>
-  );
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = mockData;
+  }
+  async componentDidMount(){
+    // try {
+    //   const result = await fetch('https://ironfists.azurewebsites.net/api',{
+    //     mode: 'no-cors'})
+    //   console.log(result.json());
+    //   this.setState(result.json());
+    // } catch (error) {
+    //   return ('Damn something has gone wrong');
+    // }
+  }
+  render() {
+    return (
+      <div>
+        
+        <Nav />
+        <Header />
+        <News news={this.state.news} />
+        <Forum />
+        <About />
+        <Join />
+        <Servers />
+        <Rules />
+        <Links />
+        <CMDmsg />
+        <Roster />
+        <Donate />
+        <Donators />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
