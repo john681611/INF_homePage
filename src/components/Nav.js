@@ -46,7 +46,7 @@ const Nav = (props) => {
                <a className="page-scroll" href="/#news">News</a>
            </li>
            <li>
-               <a className="page-scroll" href="/forum">Forum</a>
+               <a className="page-scroll" href="/forum/index.php">Forum</a>
            </li>
            <li>
                <a className="page-scroll" href="/#about">About</a>
