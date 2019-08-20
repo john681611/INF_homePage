@@ -41,7 +41,7 @@ class App extends Component {
         <Forum />
         <About />
         <Join />
-        <Servers />
+        <Servers servers={this.state.servers} />
         <Rules />
         <Links />
         <CMDmsg />
