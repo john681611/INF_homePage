@@ -2,9 +2,9 @@ import React from 'react'
  
 const Nav = (props) => {
   return (
-    <nav class="nav">
-        <div class="nav__container">
-           <a class="nav__container__logo" href="/#page-top">
+    <nav className="nav">
+        <div className="nav__container">
+           <a className="nav__container__logo" href="/#page-top">
                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 149.000000 175.000000"
          preserveAspectRatio="xMidYMid meet">
          <g transform="translate(0.000000,175.000000) scale(0.100000,-0.100000)" fill="#FFF" stroke="none">
@@ -32,7 +32,7 @@ const Nav = (props) => {
        </svg>
            <b>Iron-Fists</b>
            </a>
-           <label class="nav__container__menu-toggle" for="nav-menu">
+           <label className="nav__container__menu-toggle" htmlFor="nav-menu">
                Menu
                <svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"  fill="#FFF">
                    <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"/>
@@ -40,40 +40,40 @@ const Nav = (props) => {
            </label>
         </div>
    
-       <input type="checkbox" class="a11y" id="nav-menu"/>
-       <ul class="nav__elements">
+       <input type="checkbox" className="a11y" id="nav-menu"/>
+       <ul className="nav__elements">
            <li>
-               <a class="page-scroll" href="/#news">News</a>
+               <a className="page-scroll" href="/#news">News</a>
            </li>
            <li>
-               <a class="page-scroll" href="/forum">Forum</a>
+               <a className="page-scroll" href="/forum">Forum</a>
            </li>
            <li>
-               <a class="page-scroll" href="/#about">About</a>
+               <a className="page-scroll" href="/#about">About</a>
            </li>
            <li>
-               <a class="page-scroll" href="/#join">Join</a>
+               <a className="page-scroll" href="/#join">Join</a>
            </li>
            <li>
-               <a class="page-scroll" href="/#servers">Servers</a>
+               <a className="page-scroll" href="/#servers">Servers</a>
            </li>
            <li>
-               <a class="page-scroll" href="/#rules">Rules</a>
+               <a className="page-scroll" href="/#rules">Rules</a>
            </li>
            <li>
-               <a class="page-scroll" href="/#links">Links</a>
+               <a className="page-scroll" href="/#links">Links</a>
            </li>
            <li>
-               <a class="page-scroll" href="/#cmdmsg">Command msg</a>
+               <a className="page-scroll" href="/#cmdmsg">Command msg</a>
            </li>
            <li>
-               <a class="page-scroll" href="/#roster">Roster</a>
+               <a className="page-scroll" href="/#roster">Roster</a>
            </li>
            <li>
-               <a class="page-scroll" href="/#donate">Donate</a>
+               <a className="page-scroll" href="/#donate">Donate</a>
            </li>
            {/* <li>
-               <a class="page-scroll" href="/members">Members</a>
+               <a className="page-scroll" href="/members">Members</a>
            </li> */}
        </ul>
    </nav>

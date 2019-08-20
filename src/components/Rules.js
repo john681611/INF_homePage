@@ -2,12 +2,12 @@ import React from 'react'
 
 const Rules = (props) => {
   return (
-    <section id="rules" class="section">
-      <div class="section__inner">
+    <section id="rules" className="section">
+      <div className="section__inner">
         <h2>Public Server Rules</h2>
         <p>These are our rules and guidlines for all our public servers. Our servers are a place to have fun &amp; achieve great teamwork
   and to do that we need responsible` players.</p>
-        <ul class="list">
+        <ul className="list">
           <li>
             <b>No cheating!</b>
           </li>

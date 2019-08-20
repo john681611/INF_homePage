@@ -2,8 +2,8 @@ import React from 'react'
 
 const About = (props) => {
   return (
-    <section id="about" class="section">
-      <div class="section__inner">
+    <section id="about" className="section">
+      <div className="section__inner">
         <h2>About Iron-Fists</h2>
         <p>
           Iron-Fists is a UK based clan that takes a semi-professional approach to operations. We like a challenge, often playing way
@@ -16,7 +16,7 @@ const About = (props) => {
           <b>9pm UK</b> Time we ask you try and be present at
           <b>8:30</b>.
         </p>
-        <ul class="list">
+        <ul className="list">
           <li>
             <b>Tuesday: Free Night</b> - Vote on the forums for what you want to do.</li>
           <li>
@@ -26,7 +26,7 @@ const About = (props) => {
         </ul>
         <h3>Leadership Structure</h3>
         <p>We run a three man command for day to day running:</p>
-        <ul class="list">
+        <ul className="list">
           <li>
             <b>INF_H@wKEYE</b> - Squad CO
          </li>
@@ -49,7 +49,7 @@ const About = (props) => {
         <hr />
         <h3>Requirements</h3>
         <p>We ask that you are:</p>
-        <ul class="list">
+        <ul className="list">
           <li>
             <b>17 or older.</b>
           </li>

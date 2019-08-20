@@ -2,9 +2,9 @@ import React from 'react'
  
 const Footer = (props) => {
   return (
-    <footer class="footer">
-      <p class="footer__copyright">Copyright &copy; John Harvey {new Date().getFullYear()}</p>
-      <div class="footer__credits">
+    <footer className="footer">
+      <p className="footer__copyright">Copyright &copy; John Harvey {new Date().getFullYear()}</p>
+      <div className="footer__credits">
           <p>This site was created using content of Bohemia Interactive a.s</p>
           <p>Copyright © 2018 Bohemia Interactive a.s. All rights reserved.</p>
           <p>See www.bistudio.com for more information.</p>
