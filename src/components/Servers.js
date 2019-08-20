@@ -30,7 +30,7 @@ const Servers = (props) => {
                     </h4>
                     <p>
                       {server.mods[key].map(mod =>
-                        <a class="btn" href={`https://steamcommunity.com/sharedfiles/filedetails/?id=${mod.steamID}`} target="_blank">
+                        <a class="btn" href={`https://steamcommunity.com/sharedfiles/filedetails/?id=${mod.steamID}`} target="_blank" rel="noopener noreferrer">
                           {mod.name}
                         </a>
                       )}

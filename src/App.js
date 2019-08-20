@@ -45,9 +45,9 @@ class App extends Component {
         <Rules />
         <Links />
         <CMDmsg />
-        <Roster />
+        <Roster members={this.state.members} squads={this.state.squads} />
         <Donate />
-        <Donators />
+        <Donators donators={this.state.donators} />
         <Footer />
       </div>
     );

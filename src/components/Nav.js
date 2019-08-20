@@ -72,9 +72,9 @@ const Nav = (props) => {
            <li>
                <a class="page-scroll" href="/#donate">Donate</a>
            </li>
-           <li>
+           {/* <li>
                <a class="page-scroll" href="/members">Members</a>
-           </li>
+           </li> */}
        </ul>
    </nav>
   )
