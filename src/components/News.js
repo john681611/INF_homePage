@@ -4,9 +4,7 @@ const News = (props) => {
   return (
     <section id="news" className="section">
       <div className="section__inner">
-        News
         <h2>News &amp; Events</h2>
-        <button className="btn notification news">Enable News Push Notifications</button><br/><br/>
         {props.news.map((item, index) => {
           if (index < 3) { 
             return (

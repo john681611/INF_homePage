@@ -12,8 +12,8 @@ const About = (props) => {
         </p>
         <h3>Weekly Member Events</h3>
         <p>
-          All events start at
-          <b>9pm UK</b> Time we ask you try and be present at
+          All events start at 
+          <b>9pm UK</b> Time we ask you try and be present at 
           <b>8:30</b>.
         </p>
         <ul className="list">
@@ -67,7 +67,7 @@ const About = (props) => {
           </li>
         </ul>
         <h3>Questions?</h3>
-        <p>Come say hi on
+        <p>Come say hi on 
           <a href="ts3server://ts3.iron-fists.co.uk" target="_blank" rel="noopener noreferrer">Team Speak.</a>
         </p>
         <p>
