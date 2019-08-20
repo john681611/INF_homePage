@@ -14,27 +14,29 @@ import Donate from './components/Donate';
 import Donators from './components/Donators';
 import Roster from './components/Roster';
 import Footer from './components/Footer';
-import mockData from './mockData';
 
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = mockData;
+    this.state = {
+      news :[],
+      servers:[],
+      members:[],
+      squads: [],
+      donators:[]
+    };
   }
   async componentDidMount(){
-    // try {
-    //   const result = await fetch('https://ironfists.azurewebsites.net/api',{
-    //     mode: 'no-cors'})
-    //   console.log(result.json());
-    //   this.setState(result.json());
-    // } catch (error) {
-    //   return ('Damn something has gone wrong');
-    // }
+    try {
+      const result = await fetch('https://ironfists.azurewebsites.net/api');
+      this.setState(await result.json());
+    } catch (error) {
+      return ('Damn something has gone wrong');
+    }
   }
   render() {
     return (
       <div>
-        
         <Nav />
         <Header />
         <News news={this.state.news} />
