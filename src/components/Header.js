@@ -4,8 +4,8 @@ const Header = (props) => {
   return (
     <section className="intro">
       <div>
-        <img alt="Arma 3" className="lazyload" data-src="https://ironfists.azurewebsites.net/img/arma3logo.png"/>
-          <img alt="" className="lazyload" data-src="https://ironfists.azurewebsites.net/img/logo-desktop.png" />
+        <img alt="Arma 3" className="lazyload" data-src="/images/arma3logo.png"/>
+          <img alt="" className="lazyload" data-src="/images/logo-desktop.png" />
           <h1>Iron-Fists</h1>
           <p className="intro__text">Play Fair and with Honour</p>
           <a href="#news" className="btn btn-circle page-scroll">

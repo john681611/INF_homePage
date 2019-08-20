@@ -9,7 +9,6 @@ const Footer = (props) => {
           <p>Copyright © 2018 Bohemia Interactive a.s. All rights reserved.</p>
           <p>See www.bistudio.com for more information.</p>
       </div>
-      <script async src="https://ironfists.azurewebsites.net/js/main.js"></script>
   </footer>
   )
 }
