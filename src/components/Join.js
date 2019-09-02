@@ -12,12 +12,12 @@ const Join = (props) => {
         <ol className="entry-steps">
           <li className="entry-step">
             <div className="entry-step__number">1</div>
-            Register on our 
+            Register on our&nbsp;
             <a href="http://iron-fists.co.uk/forums/index.php">Forums</a>.
           </li>
           <li className="entry-step">
             <div className="entry-step__number">2</div>
-            Fill in a 
+            Fill in a&nbsp;
             <a href="http://iron-fists.co.uk/forums/app.php/applicationform">Members Form</a>.
            <div className="extra">(no essay required)</div>
           </li>

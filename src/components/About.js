@@ -67,7 +67,7 @@ const About = (props) => {
           </li>
         </ul>
         <h3>Questions?</h3>
-        <p>Come say hi on 
+        <p>Come say hi on&nbsp;
           <a href="ts3server://ts3.iron-fists.co.uk" target="_blank" rel="noopener noreferrer">Team Speak.</a>
         </p>
         <p>
