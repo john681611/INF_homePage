@@ -29,20 +29,27 @@ class App extends Component {
   }
   async componentDidMount(){
     try {
-      const result = await fetch('https://ironfists.azurewebsites.net/api');
-      this.setState(await result.json());
-      const result2 = await fetch('/squad.xml');
+      const members = [];
       const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(await result2.text(),"text/xml");
-      const xmlMember = []; 
-      Array.from(xmlDoc.getElementsByTagName("member")).forEach(member => {
-        xmlMember.push({
+      const data = await fetch('https://ironfists.azurewebsites.net/api').then(result => result.json())
+      const squadXML = await fetch('/forums/INF/insignia/squad.xml').then(result => result.text());
+      const squadDom = parser.parseFromString(squadXML,"text/xml");
+      Array.from(squadDom.getElementsByTagName("member")).forEach(member => {
+        const memberObj = {
           nickname: member.getAttribute('nick'),
           position: member.querySelector('icq').innerHTML,
           remark:  member.querySelector('remark').innerHTML
-        })
-      })
-      console.log(xmlMember);
+        }
+        const index = data.members.findIndex(dataMemb => memberObj.nickname.toLowerCase().includes(dataMemb.name.trim().toLowerCase()));
+        if(index !== -1){
+          members.push(Object.assign({}, data.members[index], memberObj));
+        } else {
+          members.push(memberObj);
+        }
+      });
+      members.sort((a,b) => a.position.localeCompare(b.position));
+      data.members = members;
+      this.setState(data);
     } catch (error) {
       return ('Damn something has gone wrong');
     }
