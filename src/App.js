@@ -31,6 +31,18 @@ class App extends Component {
     try {
       const result = await fetch('https://ironfists.azurewebsites.net/api');
       this.setState(await result.json());
+      const result2 = await fetch('/squad.xml');
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(await result2.text(),"text/xml");
+      const xmlMember = []; 
+      Array.from(xmlDoc.getElementsByTagName("member")).forEach(member => {
+        xmlMember.push({
+          nickname: member.getAttribute('nick'),
+          position: member.querySelector('icq').innerHTML,
+          remark:  member.querySelector('remark').innerHTML
+        })
+      })
+      console.log(xmlMember);
     } catch (error) {
       return ('Damn something has gone wrong');
     }
