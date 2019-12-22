@@ -68,4 +68,45 @@ describe('News', () => {
         expect(btn.at(1).prop('href')).toEqual('https://www.iron-fists.co.uk/forums/viewtopic.php?f=19&t=600');
 
     });
+
+    it('should render no more than 3 news items', () => {
+        wrapper.setProps({
+            news: [
+                {
+                    id: '21',
+                    title: 'BREXIT',
+                    date: '2019-09-29',
+                    imagelink: 'https://iron-fists.co.uk/forums/images/ForumPics/op_insipience.png',
+                    text: 'DOOM',
+                    link: 'https://www.iron-fists.co.uk/forums/viewtopic.php?f=19&t=483'
+                },
+                {
+                    id: '22',
+                    title: 'EV',
+                    date: '2019-09-23',
+                    text: 'Sparky',
+                    link: 'https://www.iron-fists.co.uk/forums/viewtopic.php?f=19&t=600',
+                    event: true
+                  },
+                  {
+                    id: '23',
+                    title: 'EV',
+                    date: '2019-09-23',
+                    text: 'Sparky',
+                    link: 'https://www.iron-fists.co.uk/forums/viewtopic.php?f=19&t=600',
+                    event: true
+                  },
+                  {
+                    id: '24',
+                    title: 'EV',
+                    date: '2019-09-23',
+                    text: 'Sparky',
+                    link: 'https://www.iron-fists.co.uk/forums/viewtopic.php?f=19&t=600',
+                    event: true
+                  }
+            ]
+        })
+        const titles = wrapper.find('h3');
+        expect(titles.length).toEqual(3);
+    });
 });
