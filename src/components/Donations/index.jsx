@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Donators = (props) => {
+const Donations = (props) => {
   return (
     <section id="donators" className="section">
       <div className="section__inner">
@@ -18,4 +18,4 @@ const Donators = (props) => {
   )
 }
 
-export default Donators
+export default Donations
