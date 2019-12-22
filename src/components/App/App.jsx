@@ -1,19 +1,20 @@
+
 import React, { Component } from 'react';
 import './App.css';
-import Nav from './components/Nav';
-import Header from './components/Header';
-import News from './components/News';
-import Forum from './components/Forum';
-import About from './components/About';
-import Join from './components/Join';
-import Servers from './components/Servers';
-import Rules from './components/Rules';
-import Links from './components/Links';
-import CMDmsg from './components/CMDmsg';
-import Donate from './components/Donate';
-import Donators from './components/Donators';
-import Roster from './components/Roster';
-import Footer from './components/Footer';
+import Nav from '../Nav';
+import Header from '../Header';
+import News from '../News';
+import Forum from '../Forum';
+import About from '../About';
+import Join from '../Join';
+import Servers from '../Servers';
+import Rules from '../Rules';
+import Links from '../Links';
+import CMDmsg from '../CMDmsg';
+import Donate from '../Donate';
+import Donators from '../Donators';
+import Roster from '../Roster';
+import Footer from '../Footer';
 import HttpsRedirect from 'react-https-redirect';
 
 class App extends Component {
@@ -51,7 +52,7 @@ class App extends Component {
       data.members = members;
       this.setState(data);
     } catch (error) {
-      return ('Damn something has gone wrong');
+      console.error(error)
     }
   }
   render() {

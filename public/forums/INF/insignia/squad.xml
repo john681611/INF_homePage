@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE squad SYSTEM "squad.dtd">
+<?xml-stylesheet href="squad.xsl?" type="text/xsl"?>
+
+<squad nick="INF">
+	<name>Iron Fists</name>
+	<email>admin@iron-fists.co.uk</email>
+	<web>https://iron-fists.co.uk / ts3.iron-fists.co.uk</web>
+	<picture>sqd_logo.paa</picture>
+	<title>INF</title>
+
+    <member id="76561197995337740" nick="INF_H@wKEYE">
+		<name>Shaun</name>
+		<email>admin@iron-fists.co.uk</email>
+		<icq>Alpha 1</icq>
+		<remark>(INF 1IC)</remark>
+	</member>
+
+    <member id="76561198089423855" nick="INF_Mearcat">
+		<name>Andrew</name>
+		<email>N/A</email>
+		<icq>Alpha 2</icq>
+		<remark>(INF 3IC)</remark>
+	</member>
+
+    <member id="76561198011854521" nick="INF_Maddog">
+		<name>Mark</name>
+		<email>N/A</email>
+		<icq>Alpha 3</icq>
+		<remark>Private First Class</remark>
+	</member>
+	
+	<member id="76561198062231450" nick="INF_Aiden">
+		<name>Aiden</name>
+		<email>N/A</email>
+		<icq>Alpha 4</icq>
+		<remark>Cadet</remark>
+	</member>
+	
+	<member id="76561198011263931" nick="INF_Amos">
+		<name>John</name>
+		<email>N/A</email>
+		<icq>Alpha 5</icq>
+		<remark>Private</remark>
+	</member>
+	
+	<member id="76561198039452704" nick="INF_Predator">
+		<name>Tom</name>
+		<email>N/A</email>
+		<icq>Alpha 6</icq>
+		<remark>Private</remark>
+	</member>
+	
+	
+
+	<member id="76561197997287214" nick="INF_Rhys">
+		<name>Rhys</name>
+		<email>rhyswilliams999@hotmail.co.uk</email>
+		<icq>Bravo 1</icq>
+		<remark>(INF 2IC)</remark>
+	</member>
+	
+	<member id="76561198034419493" nick="INF_Mike64">
+		<name>John</name>
+		<email>john681611@hotmail.com</email>
+		<icq>Bravo 2</icq>
+		<remark>First Sergeant</remark>
+	</member>	
+	
+	<member id="76561198012294761" nick="INF_Whitephos81">
+		<name>Dave</name>
+		<email>rockape0373@aol.com</email>
+		<icq>Bravo 3</icq>
+		<remark>Master Sergeant</remark>
+	</member>
+	
+	<member id="76561198074259613" nick="INF_Knight">
+		<name>Ryan</name>
+		<email>N/A</email>
+		<icq>Bravo 4</icq>
+		<remark>Private First Class</remark>
+	</member>
+	
+	<member id="76561198007926226" nick="INF_|Kable|™">
+		<name>Chiel</name>
+		<email>N/A</email>
+		<icq>Bravo 5</icq>
+		<remark>Lance Corporal</remark>
+	</member>
+	
+	<member id="76561198042933851" nick="INF_Bangie">
+		<name>Joshua</name>
+		<email>N/A</email>
+		<icq>Bravo 6</icq>
+		<remark>Staff Sergeant</remark>
+	</member>
+
+	<member id="76561198055408846" nick="INF_Corpsman">
+		<name>Tadhg</name>
+		<email>N/A</email>
+		<icq>Bravo 7</icq>
+		<remark>Private</remark>
+	</member>
+		
+</squad>
