@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import './App.css';
+import './index.css';
 import Nav from '../Nav';
 import Header from '../Header';
 import News from '../News';
@@ -12,7 +12,7 @@ import Rules from '../Rules';
 import Links from '../Links';
 import CMDmsg from '../CMDmsg';
 import Donate from '../Donate';
-import Donators from '../Donators';
+import Donations from '../Donations';
 import Roster from '../Roster';
 import Footer from '../Footer';
 import HttpsRedirect from 'react-https-redirect';
@@ -70,7 +70,7 @@ class App extends Component {
         <CMDmsg />
         <Roster members={this.state.members} squads={this.state.squads} />
         <Donate />
-        <Donators donators={this.state.donators} />
+        <Donations donators={this.state.donators} />
         <Footer />
       </HttpsRedirect>
     );

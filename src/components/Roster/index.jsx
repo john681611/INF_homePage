@@ -20,20 +20,20 @@ const Roster = (props) => {
               </thead>
               <tbody>
                 {props.members.filter(member => member.position.includes(squad.name)).map(member =>
-                  <tr  key={member.nickname}>
-                    <td>
+                  <tr key={member.nickname}>
+                    <td className="member-name">
                       {member.name || member.nickname}
                     </td>
-                    <th className="no-mobile" scope="row">
+                    <th className="no-mobile member-remark" scope="row">
                       {member.remark}
                     </th>
-                    <td className="no-mobile">
+                    <td className="no-mobile member-position">
                       {member.position}
                     </td>
-                    <td>
+                    <td className="member-role">
                       {member.role}
                     </td>
-                    <td className="no-mobile">
+                    <td className="no-mobile member-joined">
                       {member.joined}
                     </td>
                   </tr>

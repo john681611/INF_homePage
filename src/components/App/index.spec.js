@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import App from './App';
+import App from '.';
 import Nav from '../Nav.js';
 import Header from '../Header.js';
 import News from '../News.js';
@@ -12,8 +12,8 @@ import Rules from '../Rules.js';
 import Links from '../Links.js';
 import CMDmsg from '../CMDmsg.js';
 import Donate from '../Donate.js';
-import Donators from '../Donators.js';
-import Roster from '../Roster.js';
+import Donations from '../Donations.js';
+import Roster from '../Roster';
 import Footer from '../Footer.js';
 import HttpsRedirect from 'react-https-redirect';
 
@@ -38,7 +38,7 @@ describe('App', () => {
         <CMDmsg />
         <Roster members={wrapper.instance().members} squads={wrapper.instance().squads} />
         <Donate />
-        <Donators donators={wrapper.instance().donators} />
+        <Donations donators={wrapper.instance().donators} />
         <Footer />
       </HttpsRedirect>)).toEqual(true);
   });
@@ -116,7 +116,7 @@ describe('componentDidMount', () => {
     expect(wrapper.state().members).toEqual([
       {nickname: "INF_H@wKEYE", position: "Alpha 1", remark: "(INF 1IC)"},
       {info: "something", name: " Bob", nickname: "bob", position: "Alpha 1", remark: "(INF 1IC)"}
-  ])
+    ])
   })
 
   it('should return general error API call fails', async () => {
