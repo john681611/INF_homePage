@@ -20,7 +20,6 @@ describe('Roster', () => {
     expect(wrapper.find('section').length).toEqual(1);
   });
 
-  ;
   it('should render Squad Sub sections', () => {
     wrapper.setProps({ squads: [{
         name: 'Alpha'
