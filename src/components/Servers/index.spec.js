@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Servers from './';
 
-describe('Roster', () => {
+describe('Servers', () => {
   let wrapper;
 
   beforeEach(() => {

@@ -11,15 +11,16 @@ const News = (props) => {
             <span  key={index}>
               <h3>
                 {item.title}
+              </h3>
               <div className="date">
                   {moment(item.date).format("DD-MM-YYYY")}
               </div>
-              </h3>
+              
               {item.imagelink ? <img alt={item.title} className="newsimg lazyload" data-src={item.imagelink} /> : null}
-              <p>
+              <p className='news-text'>
                 {item.text}
               </p>
-              <a className="btn" href="<%= item.link%>" target="_blank">
+              <a className="btn news-btn" href={item.link} target="_blank" rel="noopener noreferrer">
                 {item.event ? 'Sign up' : 'Read More'}
               </a>
               <hr/>

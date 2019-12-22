@@ -32,7 +32,7 @@ class App extends Component {
     try {
       const members = [];
       const parser = new DOMParser();
-      const data = await fetch('https://ironfists.azurewebsites.net/api').then(result => result.json())
+      const data = await fetch('https://ironfists.azurewebsites.net/api').then(result => result.json());
       const squadXML = await fetch('/forums/INF/insignia/squad.xml').then(result => result.text());
       const squadDom = parser.parseFromString(squadXML,"text/xml");
       Array.from(squadDom.getElementsByTagName("member")).forEach(member => {
