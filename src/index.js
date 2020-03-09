@@ -5,6 +5,7 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import './lazysizes.min.js';
 import './main.js'
+import './pwa.js'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

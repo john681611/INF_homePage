@@ -131,5 +131,7 @@ export function unregister() {
     navigator.serviceWorker.ready.then(registration => {
       registration.unregister();
     });
+  } else {
+    document.querySelector('.notification.news').textContent = 'Push Not Supported';
   }
 }
