@@ -72,9 +72,10 @@ const Nav = (props) => {
            <li>
                <a className="page-scroll" href="/#donate">Donate</a>
            </li>
-           {/* <li>
-               <a className="page-scroll" href="/members">Members</a>
-           </li> */}
+           <li>
+               <button className="notification">Enable Notifications</button>
+               <input type="password" placeholder="Member Notification password"/>
+           </li>
        </ul>
    </nav>
   )
