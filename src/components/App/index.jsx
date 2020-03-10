@@ -25,7 +25,8 @@ class App extends Component {
       servers:[],
       members:[],
       squads: [],
-      donators:[]
+      donators:[],
+      key: null
     };
   }
   async componentDidMount(){
@@ -58,7 +59,7 @@ class App extends Component {
   render() {
     return (
       <HttpsRedirect>
-        <Nav />
+        <Nav subKey={this.state.key}/>
         <Header />
         <News news={this.state.news} />
         <Forum />

@@ -73,7 +73,7 @@ const Nav = (props) => {
            <li>
                <a className="page-scroll" href="/#donate">Donate</a>
            </li>
-            <SubscribeButton/>
+            <SubscribeButton  subKey={props.subKey}/>
        </ul>
    </nav>
   )

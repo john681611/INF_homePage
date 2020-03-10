@@ -9,11 +9,6 @@
 
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
-
-let pushButton = document.querySelector('.notification');
-
-let isSubscribed = false;
-let swRegistration = null;
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
   // [::1] is the IPv6 localhost address.
@@ -35,8 +30,7 @@ export function register(config) {
       return;
     }
 
-    window.addEventListener('load', () => {
-      pushButton = document.querySelector('.notification');
+    window.addEventListener('load',async () => {
       const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
 
       if (isLocalhost) {
@@ -50,15 +44,12 @@ export function register(config) {
         registerValidSW(swUrl, config);
       }
     });
-  } else {
-    document.querySelector('.notification').textContent = 'Push Not Supported';
   }
 }
 
-function registerValidSW(swUrl, config) {
+async function registerValidSW(swUrl, config) {
   try {
     const registration = await navigator.serviceWorker.register(swUrl);
-    initializeUI();
     registration.onupdatefound = () => {
       const installingWorker = registration.installing;
       if (installingWorker == null) {
@@ -88,7 +79,7 @@ function registerValidSW(swUrl, config) {
   }
 }
 
-function checkValidServiceWorker(swUrl, config) {
+async function checkValidServiceWorker(swUrl, config) {
   try {
     const response = await fetch(swUrl);
     const contentType = response.headers.get('content-type');
@@ -106,7 +97,7 @@ function checkValidServiceWorker(swUrl, config) {
   
 }
 
-export function unregister() {
+export async function unregister() {
   if ('serviceWorker' in navigator) {
     const registration = await navigator.serviceWorker.ready;
     registration.unregister();

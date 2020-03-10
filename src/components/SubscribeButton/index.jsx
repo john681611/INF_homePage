@@ -1,79 +1,99 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-const SubscribeButton = (props) => {
-  const reg = await navigator.serviceWorker.ready;
-  const subscription = reg.pushManager.getSubscription()
-  isSubscribed = !(subscription === null);
-  updateBtn();
-  return (
-    <li>
-      <button className="notification" disabled={props.disabled}>{props.text}</button>
-      <input type="password" placeholder="Member Notification password" />
-    </li>
-  )
-}
-
-
-function updateBtn() {
-  if (Notification.permission === 'denied') {
-    props.text = 'Push Messaging Blocked.';
-    props.disabled = true;
-    unsubscribeUser();
-    return;
+class SubscribeButton extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      disabled: true,
+      text: 'Loading',
+      memberPass: '',
+      isSubscribed: false,
+      applicationServerPublicKey: urlB64ToUint8Array(props.subKey)
+    };
   }
 
-  if (isSubscribed) {
-    props.text = 'Disable Notifications';
-  } else {
-    props.text = 'Enable Notifications';
-  }
-
-  props.disabled = false;
-
-}
-
-function sendSubToServer(subscription) {
-  let url = '/subscription';
-  if (isSubscribed) {
-    url = 'delete/subscription';
-  }
-  fetch(url, {
-    method: 'post',
-    body: JSON.stringify(subscription),
-    headers: {
-      'Content-Type': 'application/json; charset=utf-8'
+  async sendSubToServer(subscription) {
+    let url = '/subscription';
+    if (this.state.isSubscribed) {
+      url = 'delete/subscription';
     }
-  });
-}
-
-
-function subscribeUser() {
-  const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey); //eslint-disable-line no-undef
-  const reg = await navigator.serviceWorker.ready;
-  const subscription = reg.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey: applicationServerKey
-  })
-  if(memberPass) {
-    subscription.member = memberPass;
+    await fetch(url, {
+      method: 'post',
+      body: JSON.stringify(subscription),
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8'
+      }
+    });
   }
-  sendSubToServer(subscription);
-  isSubscribed = true;
-  updateBtn();
-}
 
-function unsubscribeUser() {
-  const reg = await navigator.serviceWorker.ready;
-  const subscription = reg.pushManager.getSubscription()
-  if (subscription) {
-    subscription.unsubscribe();
-    sendSubToServer(subscription);
-    isSubscribed = false;
-    updateBtn();
+  async subscribeUser() {
+    const reg = await navigator.serviceWorker.ready;
+    const subscription = reg.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: this.state.applicationServerPublicKey
+    })
+    if (this.state.memberPass) {
+      subscription.member = this.state.memberPass;
+    }
+    await this.sendSubToServer(subscription);
+    this.state.isSubscribed = true;
+    this.setState(this.state);
+    this.updateBtn();
+  }
+
+  async unsubscribeUser() {
+    const reg = await navigator.serviceWorker.ready;
+    const subscription = reg.pushManager.getSubscription()
+    if (subscription) {
+      subscription.unsubscribe();
+      await this.sendSubToServer(subscription);
+      this.state.isSubscribed = false;
+      this.setState(this.state);
+      this.updateBtn();
+    }
+  }
+
+  updateBtn() {
+    const state = this.state;
+    if (Notification.permission === 'denied') {
+      state.text = 'Push Messaging Blocked.';
+      state.disabled = true;
+      this.unsubscribeUser();
+      return;
+    }
+
+    if (this.state.isSubscribed) {
+      state.text = 'Disable Notifications';
+    } else {
+      state.text = 'Enable Notifications';
+    }
+    state.disabled = false;
+    this.setState(state);
+  }
+
+  async componentDidMount() {
+    const reg = await navigator.serviceWorker.ready;
+    const subscription = reg.pushManager.getSubscription()
+    this.state.isSubscribed = !(subscription === null);
+    this.setState(this.state);
+    this.updateBtn();
+  }
+
+  render() {
+    return (
+      <li>
+        <button className="notification" disabled={this.state.disabled}>{this.state.text}</button>
+        <input type="password" placeholder="Member Notification password" />
+      </li>
+    )
   }
 }
 
-function urlB64ToUint8Array(base64String) {
+const urlB64ToUint8Array = base64String => {
+  if(!base64String) {
+    console.log(`No Key sent: ${base64String}`)
+    return null;
+  }
   const padding = '='.repeat((4 - base64String.length % 4) % 4);
   const base64 = (base64String + padding)
     .replace(/-/g, '+')
