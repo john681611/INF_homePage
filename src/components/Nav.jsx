@@ -1,4 +1,5 @@
 import React from 'react'
+import SubscribeButton from './SubscribeButton'
  
 const Nav = (props) => {
   return (
@@ -72,10 +73,7 @@ const Nav = (props) => {
            <li>
                <a className="page-scroll" href="/#donate">Donate</a>
            </li>
-           <li>
-               <button className="notification">Enable Notifications</button>
-               <input type="password" placeholder="Member Notification password"/>
-           </li>
+            <SubscribeButton/>
        </ul>
    </nav>
   )

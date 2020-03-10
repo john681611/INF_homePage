@@ -16,12 +16,12 @@ let isSubscribed = false;
 let swRegistration = null;
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
-    // [::1] is the IPv6 localhost address.
-    window.location.hostname === '[::1]' ||
-    // 127.0.0.1/8 is considered localhost for IPv4.
-    window.location.hostname.match(
-      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
-    )
+  // [::1] is the IPv6 localhost address.
+  window.location.hostname === '[::1]' ||
+  // 127.0.0.1/8 is considered localhost for IPv4.
+  window.location.hostname.match(
+    /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+  )
 );
 
 export function register(config) {
@@ -40,19 +40,13 @@ export function register(config) {
       const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
 
       if (isLocalhost) {
-        // This is running on localhost. Let's check if a service worker still exists or not.
         checkValidServiceWorker(swUrl, config);
-
-        // Add some additional logging to localhost, pointing developers to the
-        // service worker/PWA documentation.
-        navigator.serviceWorker.ready.then(() => {
-          console.log(
-            'This web app is being served cache-first by a service ' +
-              'worker. To learn more, visit https://bit.ly/CRA-PWA'
-          );
-        });
+        await navigator.serviceWorker.ready
+        console.log(
+          'This web app is being served cache-first by a service ' +
+          'worker. To learn more, visit https://bit.ly/CRA-PWA'
+        );
       } else {
-        // Is not localhost. Just register service worker
         registerValidSW(swUrl, config);
       }
     });
@@ -62,183 +56,59 @@ export function register(config) {
 }
 
 function registerValidSW(swUrl, config) {
-  navigator.serviceWorker
-    .register(swUrl)
-    .then(registration => {
-      initializeUI();
-      registration.onupdatefound = () => {
-        const installingWorker = registration.installing;
-        if (installingWorker == null) {
-          return;
-        }
-        installingWorker.onstatechange = () => {
-          if (installingWorker.state === 'installed') {
-            if (navigator.serviceWorker.controller) {
-              // At this point, the updated precached content has been fetched,
-              // but the previous service worker will still serve the older
-              // content until all client tabs are closed.
-              console.log(
-                'New content is available and will be used when all ' +
-                  'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
-              );
-
-              // Execute callback
-              if (config && config.onUpdate) {
-                config.onUpdate(registration);
-              }
-            } else {
-              // At this point, everything has been precached.
-              // It's the perfect time to display a
-              // "Content is cached for offline use." message.
-              console.log('Content is cached for offline use.');
-
-              // Execute callback
-              if (config && config.onSuccess) {
-                config.onSuccess(registration);
-              }
+  try {
+    const registration = await navigator.serviceWorker.register(swUrl);
+    initializeUI();
+    registration.onupdatefound = () => {
+      const installingWorker = registration.installing;
+      if (installingWorker == null) {
+        return;
+      }
+      installingWorker.onstatechange = () => {
+        if (installingWorker.state === 'installed') {
+          if (navigator.serviceWorker.controller) {
+            console.log(
+              'New content is available and will be used when all ' +
+              'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
+            );
+            if (config && config.onUpdate) {
+              config.onUpdate(registration);
+            }
+          } else {
+            console.log('Content is cached for offline use.');
+            if (config && config.onSuccess) {
+              config.onSuccess(registration);
             }
           }
-        };
+        }
       };
-    })
-    .catch(error => {
-      console.error('Error during service worker registration:', error);
-    });
+    };
+  } catch (error) {
+    console.error('Error during service worker registration:', error);
+  }
 }
 
 function checkValidServiceWorker(swUrl, config) {
-  // Check if the service worker can be found. If it can't reload the page.
-  fetch(swUrl)
-    .then(response => {
-      // Ensure service worker exists, and that we really are getting a JS file.
-      const contentType = response.headers.get('content-type');
-      if (
-        response.status === 404 ||
-        (contentType != null && contentType.indexOf('javascript') === -1)
-      ) {
-        // No service worker found. Probably a different app. Reload the page.
-        navigator.serviceWorker.ready.then(registration => {
-          registration.unregister().then(() => {
-            window.location.reload();
-          });
-        });
-      } else {
-        // Service worker found. Proceed as normal.
-        registerValidSW(swUrl, config);
-      }
-    })
-    .catch(() => {
-      console.log(
-        'No internet connection found. App is running in offline mode.'
-      );
-    });
-}
-
-function urlB64ToUint8Array(base64String) {
-    const padding = '='.repeat((4 - base64String.length % 4) % 4);
-    const base64 = (base64String + padding)
-        .replace(/-/g, '+')
-        .replace(/_/g, '/');
-
-    const rawData = window.atob(base64);
-    const outputArray = new Uint8Array(rawData.length);
-
-    for (let i = 0; i < rawData.length; ++i) {
-        outputArray[i] = rawData.charCodeAt(i);
-    }
-    return outputArray;
-}
-
-function updateBtn() {
-    if (Notification.permission === 'denied') {
-        pushButton.textContent = 'Push Messaging Blocked.';
-        pushButton.disabled = true;
-        unsubscribeUser();
-        return;
-    }
-
-    if (isSubscribed) {
-        pushButton.textContent = 'Disable News Push Notifications';
+  try {
+    const response = await fetch(swUrl);
+    const contentType = response.headers.get('content-type');
+    if (response.status === 404 || (contentType != null && contentType.indexOf('javascript') === -1)) {
+      // No service worker found. Probably a different app. Reload the page.
+      const registration = await navigator.serviceWorker.ready;
+      await registration.unregister();
+      window.location.reload();
     } else {
-        pushButton.textContent = 'Enable News Push Notifications';
+      registerValidSW(swUrl, config);
     }
-
-    pushButton.disabled = false;
-
-}
-
-function sendSubToServer (url, subscription) {
-    fetch(url, {
-        method: 'post',
-        body: JSON.stringify(subscription),
-        headers: {
-            'Content-Type': 'application/json; charset=utf-8'
-        }
-    });
-}
-
-function updateSubscriptionOnServer(subscription) {
-    let url = '/subscription';
-    if (isSubscribed) {
-        url = 'delete/subscription';
-    }
-    sendSubToServer(url, subscription);
-}
-
-
-function subscribeUser() {
-    const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey); //eslint-disable-line no-undef
-    swRegistration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: applicationServerKey
-    }).then(function (subscription) {
-        updateSubscriptionOnServer(subscription);
-        isSubscribed = true;
-        updateBtn();
-    });
-}
-
-function unsubscribeUser() {
-    swRegistration.pushManager.getSubscription()
-        .then(function (subscription) {
-            if (subscription) {
-                subscription.unsubscribe();
-                updateSubscriptionOnServer(subscription);
-                isSubscribed = false;
-                updateBtn();
-            }
-        });
-}
-
-function initializeUI() {
-  console.log('IRAN')
-    if(pushButton) {
-        pushButton.addEventListener('click', function () {
-            pushButton.disabled = true;
-            if (isSubscribed) {
-                unsubscribeUser(false);
-            } else {
-                subscribeUser(false);
-            }
-        });
-    } else {
-        pushButton = {};
-    }
-
-    // Set the initial subscription value
-    swRegistration.pushManager.getSubscription()
-        .then(function (subscription) {
-            isSubscribed = !(subscription === null);
-            updateBtn();
-        });
+  } catch (error) {
+    console.log('No internet connection found. App is running in offline mode.');
+  }
+  
 }
 
 export function unregister() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready.then(registration => {
-      registration.unregister();
-    });
-  } else {
-    pushButton.textContent = 'Push Not Supported';
+    const registration = await navigator.serviceWorker.ready;
+    registration.unregister();
   }
 }
