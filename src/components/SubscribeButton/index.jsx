@@ -5,7 +5,8 @@ function SubscribeButton (props) {
     [isSubscribed, setIsSubscribed] = useState(0),
     [subKey] = useState(urlB64ToUint8Array(props.subKey)),
     [disabledButton, setDisabledButton] = useState(true),
-    [text, setText] = useState('Loading');
+    [text, setText] = useState('Loading'),
+    [expand, setExpand] = useState(false);
   let subscription;
   navigator.serviceWorker.ready.then(reg => {
     subscription = reg.pushManager.getSubscription()
@@ -69,18 +70,27 @@ function SubscribeButton (props) {
   }
 
   function notificationButton() {
-    subscribeUser();
+    isSubscribed ? unsubscribeUser() :  subscribeUser();
   }
 
   function memberPassChange (event) {
     setMemberPass(event.target.value)
   }
 
+  function onClick() {
+    expand ? setExpand(false) : setExpand(true);
+  }
+
 
     return (
       <li>
-        <button className="notification" disabled={disabledButton} onClick={() => notificationButton()}>{text}</button>
-        <input type="password" placeholder="Member Notification password" onChange={memberPassChange} />
+        <div className="notification-box">
+          <button className="notification" disabled={disabledButton} onClick={() => notificationButton()}>{text}</button>
+          <button className={`notification-drop fa fa-chevron-${expand ? 'up' :'down'}`} onClick={onClick}></button>
+        </div>
+        <div className={expand ? 'notification-content is-expanded' : 'notification-content'}>
+          <input type="password" placeholder="Member Notification password" onChange={memberPassChange} />
+        </div>
       </li>
     )
 }
