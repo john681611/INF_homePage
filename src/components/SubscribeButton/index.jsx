@@ -4,8 +4,8 @@ function SubscribeButton (props) {
   const [memberPass, setMemberPass] = useState(''),
     [isSubscribed, setIsSubscribed] = useState(0),
     [subKey] = useState(urlB64ToUint8Array(props.subKey)),
-    [disabledButton, setDisabledButton] = useState(true);
-  const [text, setText] = useState('Loading');
+    [disabledButton, setDisabledButton] = useState(true),
+    [text, setText] = useState('Loading');
   let subscription;
   navigator.serviceWorker.ready.then(reg => {
     subscription = reg.pushManager.getSubscription()
