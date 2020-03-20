@@ -3,7 +3,7 @@ importScripts(`/service-worker.js`)
 self.addEventListener('push', function (e) {
     var options = {
         body: 'This notification was generated from a push!',
-        icon: 'images/example.png',
+        icon: 'images/logo-desktop.png',
         vibrate: [100, 50, 100],
         data: {
             dateOfArrival: Date.now(),
