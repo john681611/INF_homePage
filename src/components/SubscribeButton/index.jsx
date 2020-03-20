@@ -53,7 +53,6 @@ function SubscribeButton (props) {
   }
   
   function updateBtn() {
-    console.log('updating')
     if (Notification.permission === 'denied') {
     setText('Push Messaging Blocked.');
       setDisabledButton(true);
