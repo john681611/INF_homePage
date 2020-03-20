@@ -26,7 +26,7 @@ describe('App', () => {
 
   it('should render the HttpsRedirect Component', () => {
     expect(wrapper.containsMatchingElement(  <HttpsRedirect>
-        <Nav />
+        <Nav subKey={wrapper.instance().subKey} />
         <Header />
         <News news={wrapper.instance().news} />
         <Forum />
@@ -122,7 +122,7 @@ describe('componentDidMount', () => {
   it('should return general error API call fails', async () => {
     spy = jest.spyOn(global, 'fetch').mockRejectedValueOnce('BANG');
     await wrapper.instance().componentDidMount();
-    expect(wrapper.state()).toEqual({donators: [], members: [], news: [], servers: [], squads: []})
+    expect(wrapper.state()).toEqual({donators: [], members: [], news: [], servers: [], squads: [], subKey: null})
     expect(errorLog).toHaveBeenCalledWith('BANG');
   });
 
@@ -134,7 +134,7 @@ describe('componentDidMount', () => {
     await wrapper.instance().componentDidMount();
     expect(spy).toHaveBeenCalledTimes(3);
     expect(spy).toHaveBeenCalledWith('https://ironfists.azurewebsites.net/api');
-    expect(wrapper.state()).toEqual({donators: [], members: [], news: [], servers: [], squads: []})
+    expect(wrapper.state()).toEqual({donators: [], members: [], news: [], servers: [], squads: [], subKey: null})
     expect(errorLog).toHaveBeenCalledWith('BANG');
   });
 });

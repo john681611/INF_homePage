@@ -1,20 +1,21 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class SubscribeButton extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      disabled: true,
-      text: 'Loading',
-      memberPass: '',
-      isSubscribed: false,
-      applicationServerPublicKey: urlB64ToUint8Array(props.subKey)
-    };
-  }
+function SubscribeButton (props) {
+  const [memberPass, setMemberPass] = useState(''),
+    [isSubscribed, setIsSubscribed] = useState(0),
+    [subKey] = useState(urlB64ToUint8Array(props.subKey)),
+    [disabledButton, setDisabledButton] = useState(true);
+  const [text, setText] = useState('Loading');
+  let subscription;
+  navigator.serviceWorker.ready.then(reg => {
+    subscription = reg.pushManager.getSubscription()
+    setIsSubscribed(!(subscription === null));
+    updateBtn();
+  })
 
-  async sendSubToServer(subscription) {
+  async function sendSubToServer(subscription) {
     let url = '/subscription';
-    if (this.state.isSubscribed) {
+    if (isSubscribed) {
       url = 'delete/subscription';
     }
     await fetch(url, {
@@ -25,73 +26,70 @@ class SubscribeButton extends Component {
       }
     });
   }
-
-  async subscribeUser() {
+  
+  async function subscribeUser() {
     const reg = await navigator.serviceWorker.ready;
     const subscription = reg.pushManager.subscribe({
       userVisibleOnly: true,
-      applicationServerKey: this.state.applicationServerPublicKey
+      applicationServerKey: subKey
     })
-    if (this.state.memberPass) {
-      subscription.member = this.state.memberPass;
+    if (memberPass) {
+      subscription.member = memberPass;
     }
     await this.sendSubToServer(subscription);
-    this.state.isSubscribed = true;
-    this.setState(this.state);
-    this.updateBtn();
+    setIsSubscribed(true);
+    updateBtn();
   }
-
-  async unsubscribeUser() {
+  
+  async function unsubscribeUser() {
     const reg = await navigator.serviceWorker.ready;
     const subscription = reg.pushManager.getSubscription()
     if (subscription) {
       subscription.unsubscribe();
-      await this.sendSubToServer(subscription);
-      this.state.isSubscribed = false;
-      this.setState(this.state);
-      this.updateBtn();
+      await sendSubToServer(subscription);
+      setIsSubscribed(false);
+      updateBtn();
     }
   }
-
-  updateBtn() {
-    const state = this.state;
+  
+  function updateBtn() {
+    console.log('updating')
     if (Notification.permission === 'denied') {
-      state.text = 'Push Messaging Blocked.';
-      state.disabled = true;
-      this.unsubscribeUser();
+    setText('Push Messaging Blocked.');
+      setDisabledButton(true);
+      unsubscribeUser();
       return;
     }
-
-    if (this.state.isSubscribed) {
-      state.text = 'Disable Notifications';
+  
+    if (isSubscribed) {
+      setText('Disable Notifications');
     } else {
-      state.text = 'Enable Notifications';
+      setText('Enable Notifications');
     }
-    state.disabled = false;
-    this.setState(state);
+    setDisabledButton(false);
   }
 
-  async componentDidMount() {
-    const reg = await navigator.serviceWorker.ready;
-    const subscription = reg.pushManager.getSubscription()
-    this.state.isSubscribed = !(subscription === null);
-    this.setState(this.state);
-    this.updateBtn();
+  function notificationButton() {
+    subscribeUser();
   }
 
-  render() {
+  function memberPassChange (event) {
+    setMemberPass(event.target.value)
+  }
+
+
     return (
       <li>
-        <button className="notification" disabled={this.state.disabled}>{this.state.text}</button>
-        <input type="password" placeholder="Member Notification password" />
+        <button className="notification" disabled={disabledButton} onClick={() => notificationButton()}>{text}</button>
+        <input type="password" placeholder="Member Notification password" onChange={memberPassChange} />
       </li>
     )
-  }
 }
+
+
 
 const urlB64ToUint8Array = base64String => {
   if(!base64String) {
-    console.log(`No Key sent: ${base64String}`)
     return null;
   }
   const padding = '='.repeat((4 - base64String.length % 4) % 4);

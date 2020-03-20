@@ -26,7 +26,7 @@ class App extends Component {
       members:[],
       squads: [],
       donators:[],
-      key: null
+      subKey: null
     };
   }
   async componentDidMount(){
@@ -51,7 +51,10 @@ class App extends Component {
       });
       members.sort((a,b) => a.position.localeCompare(b.position));
       data.members = members;
+      data.subKey = data.key
+      delete data.key;
       this.setState(data);
+      this.render();
     } catch (error) {
       console.error(error)
     }
@@ -59,7 +62,7 @@ class App extends Component {
   render() {
     return (
       <HttpsRedirect>
-        <Nav subKey={this.state.key}/>
+        <Nav subKey={this.state.subKey}/>
         <Header />
         <News news={this.state.news} />
         <Forum />
