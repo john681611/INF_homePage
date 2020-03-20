@@ -57,3 +57,7 @@ Array.prototype.slice.call(els).forEach(function(el) {
         document.getElementById('nav-menu').checked = false;
     });
 });
+
+Notification.requestPermission(function(status) {
+    console.log('Notification permission status:', status);
+});
