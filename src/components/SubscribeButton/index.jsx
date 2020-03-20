@@ -8,14 +8,14 @@ function SubscribeButton (props) {
     [text, setText] = useState('Loading'),
     [expand, setExpand] = useState(false);
   let subscription;
-  navigator.serviceWorker.ready.then(reg => {
-    subscription = reg.pushManager.getSubscription()
+  navigator.serviceWorker.ready.then(async reg => {
+    subscription = await reg.pushManager.getSubscription()
     setIsSubscribed(!(subscription === null));
     updateBtn();
   })
 
   async function sendSubToServer(subscription) {
-    let url = '/subscription';
+    let url = 'https://ironfists.azurewebsites.net/subscription';
     if (isSubscribed) {
       url = 'delete/subscription';
     }
@@ -30,21 +30,23 @@ function SubscribeButton (props) {
   
   async function subscribeUser() {
     const reg = await navigator.serviceWorker.ready;
-    const subscription = reg.pushManager.subscribe({
+    console.log(subKey)
+    const subscription = await reg.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: subKey
     })
     if (memberPass) {
       subscription.member = memberPass;
     }
-    await this.sendSubToServer(subscription);
+    await sendSubToServer(subscription);
     setIsSubscribed(true);
     updateBtn();
   }
   
   async function unsubscribeUser() {
     const reg = await navigator.serviceWorker.ready;
-    const subscription = reg.pushManager.getSubscription()
+    const subscription = await reg.pushManager.getSubscription();
+    console.log(subscription)
     if (subscription) {
       subscription.unsubscribe();
       await sendSubToServer(subscription);
