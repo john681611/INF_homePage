@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-
 function SubscribeButton (props) {
   const [memberPass, setMemberPass] = useState(''),
     [isSubscribed, setIsSubscribed] = useState(0),
-    [subKey] = useState(urlB64ToUint8Array(props.subKey)),
-    [disabledButton, setDisabledButton] = useState(true),
-    [text, setText] = useState('Loading'),
-    [expand, setExpand] = useState(false);
+    [buttonState, setButtonState] = useState({expand: false, text: 'Loading', disabled: true})
   let subscription;
-  navigator.serviceWorker.ready.then(async reg => {
-    subscription = await reg.pushManager.getSubscription()
-    setIsSubscribed(!(subscription === null));
-    updateBtn();
-  })
+    navigator.serviceWorker.ready.then(async reg => {
+      subscription = await reg.pushManager.getSubscription()
+      setIsSubscribed(!(subscription === null));
+      updateBtn();
+    })
 
   async function sendSubToServer(subscription) {
     let url = 'https://ironfists.azurewebsites.net/subscription';
@@ -20,7 +16,7 @@ function SubscribeButton (props) {
       url = 'delete/subscription';
     }
     await fetch(url, {
-      method: 'post',
+      method: 'POST',
       body: JSON.stringify(subscription),
       headers: {
         'Content-Type': 'application/json; charset=utf-8'
@@ -30,10 +26,9 @@ function SubscribeButton (props) {
   
   async function subscribeUser() {
     const reg = await navigator.serviceWorker.ready;
-    console.log(subKey)
     const subscription = await reg.pushManager.subscribe({
       userVisibleOnly: true,
-      applicationServerKey: subKey
+      applicationServerKey: urlB64ToUint8Array(props.subKey)
     })
     if (memberPass) {
       subscription.member = memberPass;
@@ -56,19 +51,22 @@ function SubscribeButton (props) {
   }
   
   function updateBtn() {
-    if (Notification.permission === 'denied') {
-    setText('Push Messaging Blocked.');
-      setDisabledButton(true);
+    let text = buttonState.text;
+    let disabled = buttonState.disabled;
+    if (!props.subKey) {
+      disabled = true;
+      text = 'Key Not Passed';
+    } else if (Notification.permission === 'denied') {
+      text = 'Push Messaging Blocked.';
+      disabled = true;
       unsubscribeUser();
-      return;
-    }
-  
-    if (isSubscribed) {
-      setText('Disable Notifications');
     } else {
-      setText('Enable Notifications');
+      text = `${isSubscribed ? 'Disable' : 'Enable'} Notifications`;
+      disabled = false;
     }
-    setDisabledButton(false);
+    if(text !== buttonState.text || disabled !== buttonState.disabled) {
+      setButtonState({expand: buttonState.expand, text, disabled});
+    }
   }
 
   function notificationButton() {
@@ -80,17 +78,17 @@ function SubscribeButton (props) {
   }
 
   function onClick() {
-    expand ? setExpand(false) : setExpand(true);
+    setButtonState({expand: (buttonState.expand ? false : true), text: buttonState.text, disabled: buttonState.disabled});
   }
 
 
     return (
       <li>
         <div className="notification-box">
-          <button className="notification" disabled={disabledButton} onClick={() => notificationButton()}>{text}</button>
-          <button className={`notification-drop fa fa-chevron-${expand ? 'up' :'down'}`} onClick={onClick}></button>
+          <button className="notification" disabled={buttonState.disabled} onClick={notificationButton}>{buttonState.text}</button>
+          <button className={`notification-drop fa fa-chevron-${buttonState.expand ? 'up' :'down'}`} disabled={buttonState.disabled} onClick={onClick}></button>
         </div>
-        <div className={expand ? 'notification-content is-expanded' : 'notification-content'}>
+        <div className={buttonState.expand ? 'notification-content is-expanded' : 'notification-content'}>
           <input type="password" placeholder="Member Notification password" onChange={memberPassChange} />
         </div>
       </li>
@@ -100,9 +98,6 @@ function SubscribeButton (props) {
 
 
 const urlB64ToUint8Array = base64String => {
-  if(!base64String) {
-    return null;
-  }
   const padding = '='.repeat((4 - base64String.length % 4) % 4);
   const base64 = (base64String + padding)
     .replace(/-/g, '+')
