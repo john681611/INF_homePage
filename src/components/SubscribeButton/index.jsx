@@ -11,17 +11,21 @@ function SubscribeButton (props) {
     })
 
   async function sendSubToServer(subscription) {
-    let url = 'https://ironfists.azurewebsites.net/subscription';
-    if (isSubscribed) {
-      url = 'delete/subscription';
-    }
-    await fetch(url, {
-      method: 'POST',
-      body: JSON.stringify(subscription),
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8'
+    try {
+      await fetch(`https://ironfists.azurewebsites.net/${isSubscribed ? 'delete/' : ''}subscription`, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(subscription),
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8'
+        }
+      });
+    } catch (error) {
+      if(!isSubscribed) {
+        subscription.unsubscribe();
       }
-    });
+      throw error;
+    }
   }
   
   async function subscribeUser() {
@@ -41,7 +45,6 @@ function SubscribeButton (props) {
   async function unsubscribeUser() {
     const reg = await navigator.serviceWorker.ready;
     const subscription = await reg.pushManager.getSubscription();
-    console.log(subscription)
     if (subscription) {
       subscription.unsubscribe();
       await sendSubToServer(subscription);
