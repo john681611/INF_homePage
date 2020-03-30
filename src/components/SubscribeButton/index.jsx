@@ -26,6 +26,8 @@ function SubscribeButton (props) {
       throw error;
     }
   }
+
+  const convertToBasicObj = obj => JSON.parse(JSON.stringify(obj));
   
   async function subscribeUser() {
     const reg = await navigator.serviceWorker.ready;
@@ -33,10 +35,7 @@ function SubscribeButton (props) {
       userVisibleOnly: true,
       applicationServerKey: urlB64ToUint8Array(props.subKey)
     })
-    if (memberPass) {
-      subscription.member = memberPass;
-    }
-    await sendSubToServer(subscription);
+    await sendSubToServer(memberPass ? Object.assign({}, convertToBasicObj(subscription), {member: memberPass}): subscription);
     setIsSubscribed(true);
     updateBtn();
   }
