@@ -13,7 +13,7 @@ function SubscribeButton (props) {
   async function sendSubToServer(subscription) {
     try {
       await fetch(`https://ironfists.azurewebsites.net/${isSubscribed ? 'delete/' : ''}subscription`, {
-        method: 'POST',
+        method: 'post',
         mode: 'no-cors',
         body: JSON.stringify(subscription),
         headers: {
