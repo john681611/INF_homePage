@@ -14,7 +14,6 @@ function SubscribeButton (props) {
     try {
       await fetch(`https://ironfists.azurewebsites.net/${isSubscribed ? 'delete/' : ''}subscription`, {
         method: 'post',
-        mode: 'no-cors',
         body: JSON.stringify(subscription),
         headers: {
           'Content-Type': 'application/json; charset=utf-8'
