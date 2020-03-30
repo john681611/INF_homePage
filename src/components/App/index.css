@@ -18,16 +18,24 @@
 .notification-content {
     max-height: 0;
     transition: max-height .5s;
+    width: 100%;
     overflow: hidden;
+}
+
+.notification-content input {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px;
 }
 
 .is-expanded {
     max-height: 500px;
     overflow: visible;
-    position: absolute;
-    right: 10px;
     border-top: 0;
     border: #333 solid 1px;
     padding: 5px;
     margin-top: 16px;
 }
+
