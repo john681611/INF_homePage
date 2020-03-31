@@ -5,9 +5,9 @@ self.addEventListener('push', event => {
     const data = JSON.parse(event.data.text());
     const options = {
         body: `${data.message}`,
-        icon: '/img/logo-desktop.png',
-        badge: '/img/logo-desktop.png',
-        data: data.url || 'http://ironfists.azurewebsites.net/#news'
+        icon: '/images/logo-desktop.png',
+        badge: '/images/logo-desktop.png',
+        data: data.url || 'https://www.iron-fists.co.uk/#news'
     };
     event.waitUntil(self.registration.showNotification(title, options));
 });
