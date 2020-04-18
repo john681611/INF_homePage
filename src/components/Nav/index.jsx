@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
+
 const Nav = props => {
     const [memberPass, setMemberPass] = useState(''),
         [isSubscribed, setIsSubscribed] = useState(0),
-        [buttonState, setButtonState] = useState({ expand: false, text: 'Loading', disabled: true })
+        [buttonState, setButtonState] = useState({ expand: false, text: 'Loading', disabled: true }),
+        [errorMessage, setErrorMessage] = useState('');
     let subscription;
     navigator.serviceWorker.ready.then(async reg => {
         subscription = await reg.pushManager.getSubscription()
@@ -13,20 +15,26 @@ const Nav = props => {
 
     async function sendSubToServer(subscription) {
         try {
-            await fetch(`https://ironfists.azurewebsites.net/${isSubscribed ? 'delete/' : ''}subscription`, {
+            const result = await fetch(`https://ironfists.azurewebsites.net/${isSubscribed ? 'delete/' : ''}subscription`, {
                 method: 'post',
                 body: JSON.stringify(subscription),
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8'
                 }
             });
-        } catch (error) {
-            if (!isSubscribed) {
-                subscription.unsubscribe();
+            if(result.status > 299) {
+                throw result;
             }
+        } catch (error) {
+            if(!isSubscribed) {
+                unsubscribeUser();
+            }
+            setButtonState({ expand:true, text: buttonState.text, disabled: buttonState.disabled });
+            setErrorMessage(error.status === 401?'Bad Password' : 'Error Try Again');
             throw error;
         }
     }
+    
 
     const convertToBasicObj = obj => JSON.parse(JSON.stringify(obj));
 
@@ -163,6 +171,7 @@ const Nav = props => {
             </ul>
             <div className={buttonState.expand ? 'notification-content is-expanded' : 'notification-content'}>
                 <input type="password" placeholder="Member Notification password" onChange={memberPassChange} />
+                <span className="notification-error">{errorMessage}</span>
             </div>
         </nav>
     )

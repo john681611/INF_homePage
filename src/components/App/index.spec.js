@@ -17,6 +17,13 @@ import Roster from '../Roster';
 import Footer from '../Footer';
 import HttpsRedirect from 'react-https-redirect';
 
+
+global.navigator.serviceWorker = {
+  ready: {
+    then: jest.fn()
+  }
+}
+
 describe('App', () => {
   let wrapper;
 
