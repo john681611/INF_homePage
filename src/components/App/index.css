@@ -4,6 +4,8 @@
     margin: 0;
 }
 
+
+
 .notification-box {
     display: flex;
 }
@@ -15,6 +17,13 @@
     flex-shrink: 0;
     flex-grow: 0;
     min-width: initial;
+    width: 10%;
+}
+
+@media (min-width:768px){
+    .notification-drop  {
+        width: initial;
+    }
 }
 
 .notification-content {
