@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 import Nav from '../Nav';
 import Header from '../Header';
@@ -17,24 +17,17 @@ import Roster from '../Roster';
 import Footer from '../Footer';
 import HttpsRedirect from 'react-https-redirect';
 
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      news :[],
-      servers:[],
-      members:[],
-      squads: [],
-      donators:[],
-      subKey: null
-    };
-  }
-  async componentDidMount(){
+
+function App () {
+  const [initialData, setInitialData] = React.useState(null);
+  useEffect(() => {
+    const callApi = async () => {
     try {
       const members = [];
       const parser = new DOMParser();
-      const data = await fetch('https://ironfists.azurewebsites.net/api').then(result => result.json());
-      const squadXML = await fetch('/forums/INF/insignia/squad.xml').then(result => result.text());
+      const dataProm = fetch('https://ironfists.azurewebsites.net/api').then(result => result.json())
+      const squadXMLProm = fetch('/forums/INF/insignia/squad.xml').then(result => result.text())
+      const [data, squadXML] = await Promise.all([dataProm,squadXMLProm]).catch(err => {throw err});
       const squadDom = parser.parseFromString(squadXML,"text/xml");
       Array.from(squadDom.getElementsByTagName("member")).forEach(member => {
         const memberObj = {
@@ -53,32 +46,31 @@ class App extends Component {
       data.members = members;
       data.subKey = data.key
       delete data.key;
-      this.setState(data);
-      this.render();
+      setInitialData(data);
     } catch (error) {
-      console.error(error)
+      console.error("useEffect: ", error)
     }
   }
-  render() {
+    callApi();
+  }, []);
     return (
       <HttpsRedirect>
-        <Nav subKey={this.state.subKey}/>
+        <Nav subKey={(initialData && initialData.subKey) || ""}/>
         <Header />
-        <News news={this.state.news} />
+        {initialData && <News news={initialData.news} />}
         <Forum />
         <About />
         <Join />
-        <Servers servers={this.state.servers} />
+        {initialData && <Servers servers={initialData.servers } />}
         <Rules />
         <Links />
         <CMDmsg />
-        <Roster members={this.state.members} squads={this.state.squads} />
+        {initialData && <Roster members={initialData.members} squads={initialData.squads} />}
         <Donate />
-        <Donations donators={this.state.donators} />
+        {initialData && <Donations donators={initialData.donators} />}
         <Footer />
       </HttpsRedirect>
     );
-  }
 }
 
 export default App;
