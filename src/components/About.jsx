@@ -13,8 +13,8 @@ const About = (props) => {
         <h3>Weekly Member Events</h3>
         <p>
           All events start at 
-          <b>9pm UK</b> Time we ask you try and be present at 
-          <b>8:30</b>.
+          <b> 9pm UK</b> Time we ask you try and be present at 
+          <b> 8:30</b>.
         </p>
         <ul className="list">
           <li>
