@@ -58,6 +58,8 @@ Array.prototype.slice.call(els).forEach(function(el) {
     });
 });
 
-Notification.requestPermission(function(status) {
-    console.log('Notification permission status:', status);
-});
+if(window.Notification) {
+    window.Notification.requestPermission(function(status) {
+        console.log('Notification permission status:', status);
+    });
+}

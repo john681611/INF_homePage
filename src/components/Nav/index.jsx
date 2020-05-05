@@ -66,7 +66,7 @@ const Nav = props => {
         if (!props.subKey) {
             disabled = true;
             text = 'Key Not Passed';
-        } else if (Notification.permission === 'denied') {
+        } else if (!window.Notification || window.Notification.permission === 'denied') {
             text = 'Push Messaging Blocked.';
             disabled = true;
             unsubscribeUser();

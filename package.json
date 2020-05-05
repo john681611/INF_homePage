@@ -1,6 +1,7 @@
 {
   "name": "bla",
   "version": "0.1.0",
+  "homepage": "https://www.iron-fists.co.uk/",
   "private": true,
   "dependencies": {
     "enzyme": "^3.11.0",

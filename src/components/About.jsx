@@ -34,7 +34,7 @@ const About = (props) => {
             <b>INF_Rhys</b> - 2IC
           </li>
           <li>
-            <b>INF_Mearcat</b> - 3IC
+            <b>INF_Mike64</b> - 3IC
          </li>
         </ul>
         <p>
@@ -71,7 +71,7 @@ const About = (props) => {
           <a href="ts3server://ts3.iron-fists.co.uk" target="_blank" rel="noopener noreferrer">Team Speak.</a>
         </p>
         <p>
-          <b>INF_Mike64</b> - Committee Member
+          <b>INF_Mike64</b> - 3IC
         </p>
       </div>
     </section>
