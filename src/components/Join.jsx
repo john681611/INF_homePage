@@ -13,17 +13,7 @@ const Join = (props) => {
           <li className="entry-step">
             <div className="entry-step__number">1</div>
             Register on our&nbsp;
-            <a href="http://iron-fists.co.uk/forums/index.php">Forums</a>.
-          </li>
-          <li className="entry-step">
-            <div className="entry-step__number">2</div>
-            Fill in a&nbsp;
-            <a href="http://iron-fists.co.uk/forums/app.php/applicationform">Members Form</a>.
-           <div className="extra">(no essay required)</div>
-          </li>
-          <li className="entry-step">
-            <div className="entry-step__number">3</div>
-            We will get back to you!
+            <a href="https://discord.gg/sAjVrD3fS2">Discord</a> and just ask to join.
           </li>
         </ol>
       </div>

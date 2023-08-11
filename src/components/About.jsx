@@ -18,7 +18,7 @@ const About = (props) => {
         </p>
         <ul className="list">
           <li>
-            <b>Tuesday: Free Night</b> - Vote on the forums for what you want to do.</li>
+            <b>Tuesday: Free Night</b> - Play watever game you want</li>
           <li>
             <b>Thursday: Training Night</b> - Learn new skills and practice them. Usually ending in a Zeus mission.</li>
           <li>
