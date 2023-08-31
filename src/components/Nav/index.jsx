@@ -136,7 +136,7 @@ const Nav = props => {
                     <a className="page-scroll" href="/#news">News</a>
                 </li>
                 <li>
-                    <a className="page-scroll" href="https://discord.gg/sAjVrD3fS2">Diccord</a>
+                    <a className="page-scroll" href="https://discord.gg/sAjVrD3fS2">Discord</a>
                 </li>
                 <li>
                     <a className="page-scroll" href="/#about">About</a>
