@@ -26,7 +26,7 @@ function App () {
       const members = [];
       const parser = new DOMParser();
       const dataProm = fetch('https://ironfists.azurewebsites.net/api').then(result => result.json())
-      const squadXMLProm = fetch('/forums/INF/insignia/squad.xml').then(result => result.text())
+      const squadXMLProm = fetch('https://iron-fists.co.uk/tags/squad.xml').then(result => result.text())
       const [data, squadXML] = await Promise.all([dataProm,squadXMLProm]).catch(err => {throw err});
       const squadDom = parser.parseFromString(squadXML,"text/xml");
       Array.from(squadDom.getElementsByTagName("member")).forEach(member => {

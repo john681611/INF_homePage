@@ -112,7 +112,7 @@ describe('componentDidMount', () => {
     await wrapper.instance().componentDidMount();
     expect(spy).toHaveBeenCalledTimes(2);
     expect(spy).toHaveBeenCalledWith('https://ironfists.azurewebsites.net/api');
-    expect(spy).toHaveBeenCalledWith('/forums/INF/insignia/squad.xml');
+    expect(spy).toHaveBeenCalledWith('https://iron-fists.co.uk/tags/squad.xml');
   });
 
   it('should merge squad and API data', async () => {
