@@ -57,17 +57,17 @@ function App () {
       <HttpsRedirect>
         <Nav subKey={(initialData && initialData.subKey) || ""}/>
         <Header />
-        {initialData && <News news={initialData.news} />}
-        <Forum />
-        <About />
         <Join />
-        {initialData && <Servers servers={initialData.servers } />}
-        <Rules />
+        <Forum />
+        {initialData && <News news={initialData.news} />}
         <Links />
-        <CMDmsg />
+        <About />
         {initialData && <Roster members={initialData.members} squads={initialData.squads} />}
         <Donate />
         {initialData && <Donations donators={initialData.donators} />}
+        <Rules />
+        {initialData && <Servers servers={initialData.servers } />}
+        <CMDmsg />
         <Footer />
       </HttpsRedirect>
     );

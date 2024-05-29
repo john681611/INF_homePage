@@ -133,34 +133,34 @@ const Nav = props => {
             <input type="checkbox" className="a11y" id="nav-menu" />
             <ul className="nav__elements">
                 <li>
-                    <a className="page-scroll" href="/#news">News</a>
+                    <a className="page-scroll" href="/#join">Join</a>
                 </li>
                 <li>
                     <a className="page-scroll" href="https://discord.gg/sAjVrD3fS2">Discord</a>
                 </li>
                 <li>
-                    <a className="page-scroll" href="/#about">About</a>
-                </li>
                 <li>
-                    <a className="page-scroll" href="/#join">Join</a>
+                    <a className="page-scroll" href="/#news">News</a>
                 </li>
-                <li>
-                    <a className="page-scroll" href="/#servers">Servers</a>
-                </li>
-                <li>
-                    <a className="page-scroll" href="/#rules">Rules</a>
-                </li>
-                <li>
                     <a className="page-scroll" href="/#links">Links</a>
                 </li>
                 <li>
-                    <a className="page-scroll" href="/#cmdmsg">Command msg</a>
+                    <a className="page-scroll" href="/#about">About</a>
                 </li>
                 <li>
                     <a className="page-scroll" href="/#roster">Roster</a>
                 </li>
                 <li>
                     <a className="page-scroll" href="/#donate">Donate</a>
+                </li>
+                <li>
+                    <a className="page-scroll" href="/#rules">Rules</a>
+                </li>
+                <li>
+                    <a className="page-scroll" href="/#servers">Servers</a>
+                </li>
+                <li>
+                    <a className="page-scroll" href="/#cmdmsg">Command msg</a>
                 </li>
                 <li>
                     <div className="notification-box">

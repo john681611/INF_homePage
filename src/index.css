@@ -641,7 +641,9 @@ input:checked+.nav__elements {
 .intro {
     height: 100vh;
     text-align: center;
-    background: url(./images/Arma-3-mobile.jpg) no-repeat 35% top scroll;
+    background: url(./images/Intro.png) no-repeat 35% top scroll;
+    filter: grayscale(0.3) brightness(0.9) ;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
     background-size: cover;
     padding: 3.2rem 0 2rem;
     text-shadow: #000 4px 4px 4px;
@@ -726,14 +728,14 @@ input:checked+.nav__elements {
 
 @media (min-width:768px) {
     .intro {
-        background-image: url(./images/Arma-3-tablet.jpg);
+        background-image: url(./images/Intro.png);
         background-position: 37% 0
     }
 }
 
 @media (min-width:1280px) {
     .intro {
-        background-image: url(./images/Arma-3-desktop.jpg);
+        background-image: url(./images/Intro.png);
         background-position: center 0
     }
 }
@@ -866,12 +868,14 @@ input:checked+.nav__elements {
 }
 
 #forum {
-    background-image: url(./images/forum-mobile.jpg)
+    background-image: url(./images/Discord.jpg);
+    filter: grayscale(0.3) brightness(0.9) contrast(1.1);
+    box-shadow: 0 0 300px rgba(0,0,0,0.9) inset;
 }
 
 @media (min-width:768px) {
     #forum {
-        background-image: url(./images/forum-desktop-tablet.jpg)
+        background-image: url(./images/Discord.jpg)
     }
 }
 
@@ -892,18 +896,20 @@ input:checked+.nav__elements {
 }
 
 #links {
-    background-image: url(./images/Arma-3-Zeus-mobile.jpg)
+    background-image: url(./images/Links.jpg);
+    filter: grayscale(0.3) brightness(0.9) ;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
 }
 
 @media (min-width:768px) {
     #links {
-        background-image: url(./images/Arma-3-Zeus-tablet.jpg)
+        background-image: url(./images/Links.jpg)
     }
 }
 
 @media (min-width:1280px) {
     #links {
-        background-image: url(./images/Arma-3-Zeus-desktop.jpg)
+        background-image: url(./images/Links.jpg)
     }
 }
 
