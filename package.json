@@ -11,7 +11,7 @@
     "react-dom": "^19.1.0",
     "react-https-redirect": "^1.1.0",
     "react-scripts": "5.0.1",
-    "react-test-renderer": "^19.1.0"
+    "react-test-renderer": "^19.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
