@@ -9,7 +9,7 @@ const Donations = (props) => {
         <ul className="donators">
           {props.donators.map(donator =>
             <li  key={donator.name}> 
-              {donator.name}
+              <b>{donator.name}</b>
             </li>
           )}
         </ul>

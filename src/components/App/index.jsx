@@ -8,7 +8,6 @@ import About from '../About';
 import Join from '../Join';
 import Servers from '../Servers';
 import ServerRules from '../ServerRules';
-import Links from '../Links';
 import CMDmsg from '../CMDmsg';
 import Donate from '../Donate';
 import Donations from '../Donations';
@@ -25,9 +24,9 @@ function App () {
     try {
       const members = [];
       const parser = new DOMParser();
-      const dataProm = fetch('https://ironfists.azurewebsites.net/api').then(result => result.json())
-      const squadXMLProm = fetch('https://iron-fists.co.uk/tags/squad.xml').then(result => result.text())
-      const [data, squadXML] = await Promise.all([dataProm,squadXMLProm]).catch(err => {throw err});
+      const dataProm = fetch('https://ironfists.azurewebsites.net/api').then(result => result.json()).catch(err => {console.error(err)});
+      const squadXMLProm = fetch('https://iron-fists.co.uk/tags/squad.xml').then(result => result.text()).catch(err => {console.error(err)});
+      const [data, squadXML] = await Promise.all([dataProm,squadXMLProm]);
       const squadDom = parser.parseFromString(squadXML,"text/xml");
       Array.from(squadDom.getElementsByTagName("member")).forEach(member => {
         const memberObj = {
@@ -61,7 +60,6 @@ function App () {
         <Join />
         <ClanRules />
         {initialData && <News news={initialData.news} />}
-        <Links />
         {initialData && <Roster members={initialData.members} squads={initialData.squads} />}
         <Donate />
         {initialData && <Donations donators={initialData.donators} />}

@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+:root {
+  --color-gold: #dba21c;
+}
+
 html {
   scroll-behavior: smooth;
   line-height: 1.15;
@@ -334,11 +338,11 @@ p {
 }
 
 b {
-  color: #fff;
+  color: var(--color-gold);
 }
 
 a {
-  color: #42dca3;
+  color: var(--color-gold);
   text-decoration: none;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -346,16 +350,21 @@ a {
 }
 
 .btn,
-a :focus,
-a :hover,
+a:focus,
+a:hover,
 button {
-  color: #2d906b;
+  color: var(--color-gold);
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
 }
 
 .btn,
 button {
   display: inline-block;
-  border: 1px solid #2d906b;
+  border: 1px solid var(--color-gold);
   text-transform: uppercase;
   padding: 1rem;
   width: calc(100% - 2rem);
@@ -391,8 +400,9 @@ button:last-of-type {
 .btn:hover,
 button:focus,
 button:hover {
-  background-color: #2d906b;
-  color: #fff;
+  background-color: var(--color-gold);
+  text-decoration: none;
+  color: #000;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -487,7 +497,7 @@ hr {
 
 @media (min-width: 1280px) {
   .nav {
-    padding: 2rem 12.5%;
+    padding: 1rem 12.5%;
     width: 85%;
   }
 
@@ -621,7 +631,7 @@ input:checked + .nav__elements {
   .nav__elements a:after {
     content: "";
     display: block;
-    border-bottom: 3px solid #2d906b;
+    border-bottom: 3px solid var(--color-gold);
     margin-top: 4px;
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);
@@ -631,6 +641,9 @@ input:checked + .nav__elements {
     -o-transition: transform 0.25s ease-in-out;
     transition: transform 0.25s ease-in-out;
     transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+  }
+  .nav__elements a:hover {
+    text-decoration: none;
   }
 
   .nav__elements a:hover:after {
@@ -646,13 +659,13 @@ input:checked + .nav__elements {
 }
 
 .intro {
-  height: 100vh;
+  height: 40vh;
   text-align: center;
   background: url(./images/Intro.png) no-repeat 35% top scroll;
   filter: grayscale(0.3) brightness(0.9);
   box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
   background-size: cover;
-  padding: 3.2rem 0 2rem;
+  padding: 1rem 0 0;
   text-shadow: #000 4px 4px 4px;
   overflow: hidden;
   display: -webkit-box;
@@ -850,7 +863,7 @@ input:checked + .nav__elements {
     padding: 1rem 30%;
     width: 40%;
   }
-.section-wide {
+  .section-wide {
     padding: 1rem 10%;
     width: 80%;
   }
@@ -971,10 +984,30 @@ input:checked + .nav__elements {
   width: 100%;
 }
 
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
 @media (min-width: 768px) {
-  #news img {
-    width: 50%;
+  .news-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-item .btn {
+  margin-top: auto;
+}
+
+.news-item hr {
+  display: none;
 }
 
 .requirements {
@@ -1186,8 +1219,6 @@ input:checked + .nav__elements {
 
 .donators {
   font-size: 1.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
   color: #fff;
   list-style: none;
   padding: 0;
@@ -1286,16 +1317,22 @@ iframe {
   }
 }
 
-.clanRules__grid p, .clanRules__grid li {
-    font-size: 20px;
+.clanRules__grid p,
+.clanRules__grid li {
+  font-size: 20px;
 }
 .clanRules__grid li {
-    padding: .25rem 0;
+  padding: 0.25rem 0;
 }
 
 .clanRules__grid h4 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .clanRules__grid .list {
-    margin-top: 0;
+  margin-top: 0;
+}
+
+.ts-viewer {
+  width: 50%;
+  padding: 0 25%;
 }
