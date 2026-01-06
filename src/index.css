@@ -894,82 +894,17 @@ input:checked + .nav__elements {
   padding: 1rem 0;
 }
 
-#forum {
-  background-image: url(./images/Discord.jpg);
-  filter: grayscale(0.3) brightness(0.9) contrast(1.1);
-  box-shadow: 0 0 300px rgba(0, 0, 0, 0.9) inset;
-}
 
-@media (min-width: 768px) {
-  #forum {
-    background-image: url(./images/Discord.jpg);
-  }
+#roster {
+  background-image: url(./images/Arma_moonlit.png);
 }
 
 #servers {
-  background-image: url(./images/Arma-3-Apex-mobile.jpg);
+  background-image: url(./images/Arma_Afgan.jpg);
 }
 
-@media (min-width: 768px) {
-  #servers {
-    background-image: url(./images/Arma-3-Apex-tablet.jpg);
-  }
-}
-
-@media (min-width: 1280px) {
-  #servers {
-    background-image: url(./images/Arma-3-Apex-desktop.jpg);
-  }
-}
-
-#links {
-  background-image: url(./images/Links.jpg);
-  filter: grayscale(0.3) brightness(0.9);
-  box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
-}
-
-@media (min-width: 768px) {
-  #links {
-    background-image: url(./images/Links.jpg);
-  }
-}
-
-@media (min-width: 1280px) {
-  #links {
-    background-image: url(./images/Links.jpg);
-  }
-}
-
-#roster {
-  background-image: url(./images/Arma-3-Marksmen-mobile.jpg);
-}
-
-@media (min-width: 768px) {
-  #roster {
-    background-image: url(./images/Arma-3-Marksmen-tablet.jpg);
-  }
-}
-
-@media (min-width: 1280px) {
-  #roster {
-    background-image: url(./images/Arma-3-Marksmen-desktop.jpg);
-  }
-}
-
-#donators {
-  background-image: url(./images/Arma-3-Laws-mobile.jpg);
-}
-
-@media (min-width: 768px) {
-  #donators {
-    background-image: url(./images/Arma-3-Laws-tablet.jpg);
-  }
-}
-
-@media (min-width: 1280px) {
-  #donators {
-    background-image: url(./images/Arma-3-Laws-desktop.jpg);
-  }
+#clanRules {
+  background-image: url(./images/Arma_breifing.png);
 }
 
 #news .date {
