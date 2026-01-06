@@ -5,7 +5,7 @@ const ClanRules = (props) => {
         <h2>Clan Rules</h2>
         <div className="clanRules__grid">
           <div>
-            <h4>Members must:</h4>
+            <h4>Members must</h4>
             <ul className="list">
               <li>
                 Be <b>17</b> or older.
@@ -49,14 +49,14 @@ const ClanRules = (props) => {
                 To be used in TeamSpeak and games where possible.
               </li>
               <li>
-                <b>Call-sign: Iron 2</b>
+                <b>Call-sign: Iron 2.</b>
                 <br />
                 Iron 2-0, Iron 2-1 etc.
               </li>
               <li>
-                <b>24hr warning must be given for large mod changes</b>
+                <b>24hr warning must be given for large mod changes.</b>
                 <br />
-                preferably server running to test.
+                Preferably a server running.
               </li>
               <li>
                 <b>

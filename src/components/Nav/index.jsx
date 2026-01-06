@@ -91,6 +91,15 @@ const Nav = () => {
           </a>
         </li>
         <li>
+            <a
+            href="ts3server://ts3.iron-fists.co.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TeamSpeak
+          </a>
+        </li>
+        <li>
           <a className="page-scroll" href="/#Clan Rules">
             Clan Rules
           </a>
@@ -98,11 +107,6 @@ const Nav = () => {
         <li>
           <a className="page-scroll" href="/#news">
             News
-          </a>
-        </li>
-        <li>
-          <a className="page-scroll" href="/#links">
-            Links
           </a>
         </li>
         <li>
