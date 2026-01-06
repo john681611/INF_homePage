@@ -8,7 +8,7 @@ import Forum from '../Forum';
 import About from '../About';
 import Join from '../Join';
 import Servers from '../Servers';
-import Rules from '../Rules';
+import ServerRules from '../ServerRules';
 import Links from '../Links';
 import CMDmsg from '../CMDmsg';
 import Donate from '../Donate';
@@ -16,6 +16,7 @@ import Donations from '../Donations';
 import Roster from '../Roster';
 import Footer from '../Footer';
 import HttpsRedirect from 'react-https-redirect';
+import ClanRules from '../ClanRules';
 
 
 function App () {
@@ -57,15 +58,16 @@ function App () {
       <HttpsRedirect>
         <Nav subKey={(initialData && initialData.subKey) || ""}/>
         <Header />
+        <About />
         <Join />
         <Forum />
+        <ClanRules />
         {initialData && <News news={initialData.news} />}
         <Links />
-        <About />
         {initialData && <Roster members={initialData.members} squads={initialData.squads} />}
         <Donate />
         {initialData && <Donations donators={initialData.donators} />}
-        <Rules />
+        <ServerRules />
         {initialData && <Servers servers={initialData.servers } />}
         <CMDmsg />
         <Footer />

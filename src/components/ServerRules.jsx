@@ -1,8 +1,7 @@
-import React from 'react'
 
-const Rules = (props) => {
+const ServerRules = (props) => {
   return (
-    <section id="rules" className="section">
+    <section id="serverRules" className="section">
       <div className="section__inner">
         <h2>Public Server Rules</h2>
         <p>These are our rules and guidlines for all our public servers. Our servers are a place to have fun &amp; achieve great teamwork
@@ -40,4 +39,4 @@ const Rules = (props) => {
   )
 }
 
-export default Rules
+export default ServerRules
