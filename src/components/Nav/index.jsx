@@ -139,7 +139,7 @@ const Nav = props => {
                     <a className="page-scroll" href="/#join">Join</a>
                 </li>
                 <li>
-                    <a className="page-scroll" href="https://discord.gg/sAjVrD3fS2">Discord</a>
+                    <a className="page-scroll" target="_blank" href="https://discord.gg/sAjVrD3fS2" rel="noreferrer">Discord</a>
                 </li>
                 <li>
                     <a className="page-scroll" href="/#Clan Rules">Clan Rules</a>
