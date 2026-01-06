@@ -120,18 +120,8 @@ const Nav = () => {
           </a>
         </li>
         <li>
-          <a className="page-scroll" href="/#serverRules">
-            Server Rules
-          </a>
-        </li>
-        <li>
           <a className="page-scroll" href="/#servers">
             Servers
-          </a>
-        </li>
-        <li>
-          <a className="page-scroll" href="/#cmdmsg">
-            Command msg
           </a>
         </li>
       </ul>

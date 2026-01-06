@@ -7,7 +7,6 @@ import News from '../News';
 import About from '../About';
 import Join from '../Join';
 import Servers from '../Servers';
-import ServerRules from '../ServerRules';
 import CMDmsg from '../CMDmsg';
 import Donate from '../Donate';
 import Donations from '../Donations';
@@ -63,7 +62,6 @@ function App () {
         {initialData && <Roster members={initialData.members} squads={initialData.squads} />}
         <Donate />
         {initialData && <Donations donators={initialData.donators} />}
-        <ServerRules />
         {initialData && <Servers servers={initialData.servers } />}
         <CMDmsg />
         <Footer />
