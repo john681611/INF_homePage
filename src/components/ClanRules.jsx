@@ -10,14 +10,25 @@ const ClanRules = (props) => {
               <li>
                 Be <b>17</b> or older.
               </li>
-              <li>Attend Sessions or post AWOL on Discord.</li>
-              <li>Play and communicate as part of a squad.</li>
-              <li>Have mods sorted before sessions begin.</li>
-              <li>May not be part of another ArmA clan.</li>
               <li>
-                Be able to use TeamSpeak (For ArmA 3 sessions and Meetings).
+                Belong <b>only to INF</b> and no other <b>ArmA</b> squad.
               </li>
-              <li>Not use Cheats/Hacks. Nor accuse others of cheating publicly</li>
+              <li>
+                Attend <b>all official sessions</b> or{" "}
+                <b>post AWOL on Discord.</b>
+              </li>
+              <li>Have and use TeamSpeak.</li>
+              <li>
+                Use the <b>INF_</b> tag before their callsign on Teamspeak.
+              </li>
+              <li>Not use cheats or hacks.</li>
+              <li>Accuse others of cheating publicly.</li>
+              <li>Play and communicate as a cohesive unit.</li>
+              <li>Be approved by Command.</li>
+              <li>Not share confidential INF information.</li>
+              <li>Respect the chain of command and authority.</li>
+              <li>Be ready to join the server without undue delay by the stated start time.</li>
+              <li>Attend or post AWOL for the annual role call or be removed from the group.</li>
             </ul>
           </div>
           <div>
@@ -29,26 +40,26 @@ const ClanRules = (props) => {
             </p>
             <ul className="list">
               <li>
-                <b>Tuesday: Free Night</b><br />Members choice any game no
-                AWOL posts needed.
+                <b>Tuesday: Free Night</b>
+                <br />
+                Members choice any game no AWOL posts needed.
               </li>
               <li>
-                <b>Thursday: General Night</b><br />Less serious:
-                GameMaster/Zeus, Tactics & Systems & OFCRA PvP.
+                <b>Thursday: General Night</b>
+                <br />
+                Less serious: GameMaster/Zeus, Tactics & Systems & OFCRA PvP.
               </li>
               <li>
-                <b>Sunday: Mission Night</b><br />Take on a serious mission
+                <b>Sunday: Mission Night</b>
+                <br />
+                Take on a serious mission
               </li>
             </ul>
           </div>
           <div>
             <h4>General Rules and Customs</h4>
             <ul className="list">
-              <li>
-                <b>Clan-Tag: INF.</b>
-                <br />
-                To be used in TeamSpeak.
-              </li>
+              <li>Any changes to the rules must be approved by the members with a majority vote</li>
               <li>
                 <b>Call-sign: Iron 2.</b>
                 <br />
@@ -66,6 +77,9 @@ const ClanRules = (props) => {
                 <br />
                 Members are not required to stick about if they die.
               </li>
+              <li>Server passwords can be found in the rules channel on Discord.</li>
+              <li>ALL events must be planned well in advance and communicated clearly to all members, including time zones, server details, team sizes, and passwords.</li>
+              <li>All details must be shared at least 24 hours in advance.</li>
             </ul>
           </div>
         </div>
