@@ -467,8 +467,6 @@ hr {
 
 .nav {
   text-transform: uppercase;
-  font-weight: 200;
-  letter-spacing: 1px;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -538,6 +536,8 @@ hr {
 
 .nav__container__logo {
   color: #fff;
+  display: flex;
+  align-items: center;
 }
 
 .nav__container__menu-toggle {
@@ -763,7 +763,7 @@ input:checked + .nav__elements {
 .intro img {
   width: 60%;
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 @media (min-width: 768px) {
