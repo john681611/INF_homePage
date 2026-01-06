@@ -418,7 +418,7 @@ button:disabled:hover {
 
 table {
   border-collapse: collapse;
-  font-size: 0.78rem;
+  font-size: 1rem;
   width: 100%;
 }
 
@@ -432,13 +432,13 @@ table tbody td:first-child,
 table thead th {
   background: #222;
   text-align: center;
-  text-transform: uppercase;
   font-weight: 600;
-  font-size: 0.89rem;
+  font-size: 1rem;
 }
 
 table tbody td:first-child {
-  font-weight: 400;
+  font-weight: 600;
+  color: var(--color-gold)
 }
 
 hr {
@@ -1270,4 +1270,26 @@ iframe {
 .ts-viewer {
   width: 50%;
   padding: 0 25%;
+}
+
+.roster-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .roster-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.roster-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.roster-item hr {
+  margin-top: auto;
 }

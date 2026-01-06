@@ -24,9 +24,10 @@ function App () {
       const members = [];
       const parser = new DOMParser();
       const dataProm = fetch('https://ironfists.azurewebsites.net/api').then(result => result.json()).catch(err => {console.error(err)});
-      const squadXMLProm = fetch('https://iron-fists.co.uk/tags/squad.xml').then(result => result.text()).catch(err => {console.error(err)});
-      const [data, squadXML] = await Promise.all([dataProm,squadXMLProm]);
-      const squadDom = parser.parseFromString(squadXML,"text/xml");
+      const squadXMLProm = fetch('https://iron-fists.co.uk/tags/squad.xml').then(result => result.text()).catch(async err => {console.error(err);});
+      const squadXMLPromBackup = fetch('./squadBackup.xml').then(result => result.text()).catch(async err => {console.error(err);});
+      const [data, squadXML, squadXMLBackup] = await Promise.all([dataProm,squadXMLProm, squadXMLPromBackup]);
+      const squadDom = parser.parseFromString(squadXML ?? squadXMLBackup,"text/xml");
       Array.from(squadDom.getElementsByTagName("member")).forEach(member => {
         const memberObj = {
           nickname: member.getAttribute('nick'),
@@ -60,8 +61,8 @@ function App () {
         <ClanRules />
         {initialData && <News news={initialData.news} />}
         {initialData && <Roster members={initialData.members} squads={initialData.squads} />}
-        <Donate />
         {initialData && <Donations donators={initialData.donators} />}
+        <Donate />
         {initialData && <Servers servers={initialData.servers } />}
         <CMDmsg />
         <Footer />
