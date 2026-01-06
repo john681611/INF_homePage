@@ -13,10 +13,11 @@ const ClanRules = (props) => {
               <li>Attend Sessions or post AWOL on Discord.</li>
               <li>Play and communicate as part of a squad.</li>
               <li>Have mods sorted before sessions begin.</li>
+              <li>May not be part of another ArmA clan.</li>
               <li>
                 Be able to use TeamSpeak (For ArmA 3 sessions and Meetings).
               </li>
-              <li>Not use Cheats/Hacks.</li>
+              <li>Not use Cheats/Hacks. Nor accuse others of cheating publicly</li>
             </ul>
           </div>
           <div>
@@ -28,15 +29,15 @@ const ClanRules = (props) => {
             </p>
             <ul className="list">
               <li>
-                <b>Tuesday: Free Night</b> <br /> Members choice any game no
+                <b>Tuesday: Free Night</b><br />Members choice any game no
                 AWOL posts needed.
               </li>
               <li>
-                <b>Thursday: General Night</b> <br /> Less serious:
+                <b>Thursday: General Night</b><br />Less serious:
                 GameMaster/Zeus, Tactics & Systems & OFCRA PvP.
               </li>
               <li>
-                <b>Sunday: Mission Night</b> <br /> Take on a serious mission
+                <b>Sunday: Mission Night</b><br />Take on a serious mission
               </li>
             </ul>
           </div>
@@ -46,7 +47,7 @@ const ClanRules = (props) => {
               <li>
                 <b>Clan-Tag: INF.</b>
                 <br />
-                To be used in TeamSpeak and games where possible.
+                To be used in TeamSpeak.
               </li>
               <li>
                 <b>Call-sign: Iron 2.</b>

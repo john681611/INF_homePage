@@ -7,7 +7,7 @@ const About = (props) => {
         <p>
           Iron-Fists is a UK based ArmA clan that takes a semi-professional
           approach to operations. We like a challenge, often playing way
-          out-numbered and out-gunned. Our Primary focus is Arma Reforger
+          out-numbered and out-gunned. Our Primary focus is ArmA Reforger
           although we still regularly play ArmA 3 and other games as a clan.
         </p>
         <p>
