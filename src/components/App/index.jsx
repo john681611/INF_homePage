@@ -4,7 +4,6 @@ import './index.css';
 import Nav from '../Nav';
 import Header from '../Header';
 import News from '../News';
-import Forum from '../Forum';
 import About from '../About';
 import Join from '../Join';
 import Servers from '../Servers';
@@ -60,7 +59,6 @@ function App () {
         <Header />
         <About />
         <Join />
-        <Forum />
         <ClanRules />
         {initialData && <News news={initialData.news} />}
         <Links />
