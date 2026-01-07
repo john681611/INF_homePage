@@ -81,7 +81,7 @@ const Servers = (props) => {
                 <p className="smalltxt">Drag and drop file into Launcher</p>
               </span>
             ) : null}
-            {Object.keys(server.mods).map((key) => (
+            {/* {Object.keys(server.mods).map((key) => (
               <span key={key}>
                 {server.mods[key].length > 0 ? (
                   <span>
@@ -102,7 +102,7 @@ const Servers = (props) => {
                   </span>
                 ) : null}
               </span>
-            ))}
+            ))} */}
           </span>
         ))}
       </div>

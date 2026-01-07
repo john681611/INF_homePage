@@ -11,7 +11,7 @@ const News = (props) => {
             if (index < 3 || showAll) {
               return (
                 <div key={index} className="news-item">
-                  <h3>{item.title}</h3>
+                  <h4>{item.title}</h4>
                   <div className="date">
                     {moment(item.date).format("DD-MM-YYYY")}
                   </div>

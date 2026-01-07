@@ -5,6 +5,39 @@ const ClanRules = (props) => {
         <h2>Clan Rules</h2>
         <div className="clanRules__grid">
           <div>
+            <h4>Weekly Schedule</h4>
+            <p>
+              <b>8:30pm UK Time</b> for <b>9pm kickoff</b>.
+              <br />
+              Open Monthly Planning with Schedule posted on{" "}
+              <a
+                href="https://discord.gg/sAjVrD3fS2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Discord
+              </a>
+              .
+            </p>
+            <ul className="list">
+              <li>
+                <b>Tuesday:</b> Unofficial Squad Session
+                <br />
+                Members choice any game no AWOL posts needed.
+              </li>
+              <li>
+                <b>Thursday:</b> Official Training/Mission/Joint ops
+                <br />
+                Less serious: Casual missions, Tactics, Systems & OFCRA PvP.
+              </li>
+              <li>
+                <b>Sunday:</b> Official Active Mission
+                <br />
+                Serious: One life missions & Campaigns.
+              </li>
+            </ul>
+          </div>
+          <div>
             <h4>Members must</h4>
             <ul className="list">
               <li>
@@ -14,72 +47,84 @@ const ClanRules = (props) => {
                 Belong <b>only to INF</b> and no other <b>ArmA</b> squad.
               </li>
               <li>
-                Attend <b>all official sessions</b> or{" "}
-                <b>post AWOL on Discord.</b>
+                Attend <b>all official sessions</b> or <b>post AWOL</b> on{" "}
+                <a
+                  href="https://discord.gg/sAjVrD3fS2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Discord
+                </a>
+                .
               </li>
-              <li>Have and use TeamSpeak.</li>
               <li>
-                Use the <b>INF_</b> tag before their callsign on Teamspeak.
+                Have and use{" "}
+                <a
+                  href="https://www.teamspeak3.com/teamspeak-download.php"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  TeamSpeak App
+                </a>
+                .
+              </li>
+              <li>
+                Use the <b>INF_</b> tag before their callsign on{" "}
+                <a
+                  href="ts3server://ts3.iron-fists.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  TeamSpeak.
+                </a>
               </li>
               <li>Not use cheats or hacks.</li>
               <li>Accuse others of cheating publicly.</li>
               <li>Play and communicate as a cohesive unit.</li>
-              <li>Be approved by Command.</li>
+              <li>
+                Be approved by <b>Command.</b>
+              </li>
               <li>Not share confidential INF information.</li>
               <li>Respect the chain of command and authority.</li>
-              <li>Be ready to join the server without undue delay by the stated start time.</li>
-              <li>Attend or post AWOL for the annual role call or be removed from the group.</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Weekly Schedule</h4>
-            <p>
-              <b>8:30pm UK Time</b> for <b>9pm kickoff</b>.
-              <br />
-              Open Monthly Planning with Schedule posted on Discord.
-            </p>
-            <ul className="list">
+              <li>Be ready to join sessions by the start time.</li>
               <li>
-                <b>Tuesday: Free Night</b>
-                <br />
-                Members choice any game no AWOL posts needed.
-              </li>
-              <li>
-                <b>Thursday: General Night</b>
-                <br />
-                Less serious: GameMaster/Zeus, Tactics & Systems & OFCRA PvP.
-              </li>
-              <li>
-                <b>Sunday: Mission Night</b>
-                <br />
-                Take on a serious mission
+                Attend or post AWOL for the annual role call or be removed from
+                the group.
               </li>
             </ul>
           </div>
           <div>
             <h4>General Rules and Customs</h4>
             <ul className="list">
-              <li>Any changes to the rules must be approved by the members with a majority vote</li>
               <li>
-                <b>Call-sign: Iron 2.</b>
-                <br />
-                Iron 2-0, Iron 2-1 etc.
+                <b>Rule:</b> Any changes to the rules must be approved by the
+                members with a majority vote
               </li>
               <li>
-                <b>24hr warning must be given for large mod changes.</b>
+                Call-sign: <b>Iron 2.</b>
+              </li>
+              <li>
+                <b>Minimum 24hr warning must be given for:</b>
                 <br />
-                Preferably a server running.
+                Official Sessions and large mod changes.
               </li>
               <li>
                 <b>
                   One and Done mission rules to be announced at mission start.
-                </b>
-                <br />
+                </b>{" "}
                 Members are not required to stick about if they die.
               </li>
-              <li>Server passwords can be found in the rules channel on Discord.</li>
-              <li>ALL events must be planned well in advance and communicated clearly to all members, including time zones, server details, team sizes, and passwords.</li>
-              <li>All details must be shared at least 24 hours in advance.</li>
+              <li>
+                Server passwords to be found in the rules channel on{" "}
+                <a
+                  href="https://discord.gg/sAjVrD3fS2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Discord
+                </a>
+                .
+              </li>
             </ul>
           </div>
         </div>
