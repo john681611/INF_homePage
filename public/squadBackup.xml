@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE squad SYSTEM "squad.dtd">
+<?xml-stylesheet href="squad.xsl?" type="text/xsl"?>
+
+<squad nick="INF">
+	<name>Iron Fists</name>
+	<email>admin@iron-fists.co.uk</email>
+	<web>https://iron-fists.co.uk / ts3.iron-fists.co.uk</web>
+	<picture>sqd_logo.paa</picture>
+	<title>INF</title>
+
+    <member id="76561197995337740" nick="H@wKEYE">
+		<name>Shaun</name>
+		<email>admin@iron-fists.co.uk</email>
+		<icq>Alpha 1</icq>
+		<remark>(INF 1IC)</remark>
+	</member>
+
+    <member id="76561198089423855" nick="Mearcat">
+		<name>Andrew</name>
+		<email>N/A</email>
+		<icq>Alpha 2</icq>
+		<remark>Staff Sergeant</remark>
+	</member>
+	
+	<member id="76561198084133056" nick="ToTall">
+		<name>Jack</name>
+		<email>N/A</email>
+		<icq>Alpha 3</icq>
+		<remark>Private First Class</remark>
+	</member>
+	
+	<member id="76561198062231450" nick="Aiden">
+		<name>Aiden</name>
+		<email>N/A</email>
+		<icq>Alpha 4</icq>
+		<remark>Private First Class</remark>
+	</member>
+	
+	<member id="76561198039452704" nick="PRED">		
+	<name>Tom</name>	
+	<email>N/A</email>	
+	<icq>Alpha 5</icq>	
+	<remark>Private</remark>	
+    </member>		
+
+		<member id="76561198072061000" nick="Nordic">
+		<name>Nathan</name>
+		<email>N/A</email>
+		<icq>Alpha 6</icq>
+		<remark>Private First Class</remark>
+	</member>
+	
+	<member id="76561197997287214" nick="rhyswilliams999">
+		<name>Rhys</name>
+		<email>rhyswilliams999@hotmail.co.uk</email>
+		<icq>Bravo 1</icq>
+		<remark>(INF 2IC)</remark>
+	</member>
+	
+	<member id="76561198034419493" nick="Mike64">
+		<name>John</name>
+		<email>N/A</email>
+		<icq>Bravo 2</icq>
+		<remark>(INF 3IC)</remark>
+	</member>	
+	
+	<member id="76561198012294761" nick="Whitephos81">
+		<name>Dave</name>
+		<email>rockape0373@aol.com</email>
+		<icq>Bravo 3</icq>
+		<remark>Master Sergeant</remark>
+	</member>
+	
+	<member id="76561198007926226" nick="|Kable|™">
+		<name>Chiel</name>
+		<email>N/A</email>
+		<icq>Bravo 5</icq>
+		<remark>Sergeant</remark>
+	</member>
+	
+	<member id="76561198042933851" nick="Bangie">
+		<name>Joshua</name>
+		<email>N/A</email>
+		<icq>Bravo 6</icq>
+		<remark>Staff Sergeant</remark>
+	</member>
+
+		
+</squad>

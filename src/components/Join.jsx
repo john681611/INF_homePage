@@ -1,24 +1,36 @@
-import React from 'react'
+import React from "react";
 
 const Join = (props) => {
   return (
     <section id="join" className="section">
       <div className="section__inner">
-        <h2>Becoming A Member</h2>
+        <h3>Joining</h3>
         <p>
-          Try as we might, a small paragraph isn't going get you hooked. So we recommend joining one of our public servers and have
-          a chat with us over Teamspeak. If you like what you have experienced then joining is as easy as.
+          Checkout our <a href="#clanRules">Clan rules</a> for your basic
+          requirements and how we operate.
+          <br />
+          Then simply talk to a member of command on <br />
+          <a
+            href="https://discord.gg/sAjVrD3fS2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Discord
+          </a>
+          &nbsp;or&nbsp;
+          <a
+            href="ts3server://ts3.iron-fists.co.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TeamSpeak.
+          </a>
+          <br />
+          And we will take you through everything you need to know.
         </p>
-        <ol className="entry-steps">
-          <li className="entry-step">
-            <div className="entry-step__number">1</div>
-            Register on our&nbsp;
-            <a href="https://discord.gg/sAjVrD3fS2">Discord</a> and just ask to join.
-          </li>
-        </ol>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Join
+export default Join;

@@ -1,18 +1,17 @@
-import React from 'react'
 
 const Roster = (props) => {
   return (
     <section id="roster" className="section">
       <div className="section__inner">
         <h2>Roster</h2>
+        <div className="roster-grid">
         {props.squads.map(squad =>
-          <span  key={squad.name}>
+          <div key={squad.name} className="roster-item">
             <h3>{squad.name}</h3>
             <table className="table table-inverse">
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th className="no-mobile">Rank</th>
                   <th className="no-mobile">Position</th>
                   <th>Role</th>
                   <th className="no-mobile">Enlisted</th>
@@ -24,11 +23,8 @@ const Roster = (props) => {
                     <td className="member-name">
                       {member.name || member.nickname}
                     </td>
-                    <th className="no-mobile member-remark" scope="row">
-                      {member.remark}
-                    </th>
                     <td className="no-mobile member-position">
-                      {member.position}
+                      {member.position.replace(squad.name, "").trim()}
                     </td>
                     <td className="member-role">
                       {member.role}
@@ -40,10 +36,10 @@ const Roster = (props) => {
                 )}
               </tbody>
             </table>
-            <hr />
-          </span>
+          </div>
         )}
-      </div>
+        </div>
+        </div>
     </section>
   )
 }
