@@ -1,5 +1,6 @@
 import React from "react";
 
+const serverStatusStyle = { border: 0, position: "relative", width: "100%", height: "100%", margin:"0 auto" };
 const Servers = (props) => {
   return (
     <section id="servers" className="section">
@@ -47,64 +48,19 @@ const Servers = (props) => {
         </p>
 
         <h2>Servers</h2>
-        {props.servers.map((server) => (
-          <span key={server.name}>
-            <h3>{server.name}</h3>
-            <p>
-              <a
-                href={server.info.link}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                title={server.info.link}
-                className="postlink"
-              >
-                <img
-                  alt=""
-                  resizemod="off"
-                  className="lazyload"
-                  data-src={server.info.src}
-                  border="0"
-                  width="100%"
-                  title=""
-                />
-              </a>
-            </p>
-            {server.file ? (
-              <span>
-                <a
-                  className="btn"
-                  href={`https://ironfists.azurewebsites.net/modlist/${server.id}`}
-                  download={`INF_${server.name}_preset.html`}
-                >
-                  Download Preset
-                </a>
-                <p className="smalltxt">Drag and drop file into Launcher</p>
-              </span>
-            ) : null}
-            {/* {Object.keys(server.mods).map((key) => (
-              <span key={key}>
-                {server.mods[key].length > 0 ? (
-                  <span>
-                    <h4>{key}</h4>
-                    <p>
-                      {server.mods[key].map((mod) => (
-                        <a
-                          key={mod.steamID}
-                          className="btn mod"
-                          href={`https://steamcommunity.com/sharedfiles/filedetails/?id=${mod.steamID}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {mod.name}
-                        </a>
-                      ))}
-                    </p>
-                  </span>
-                ) : null}
-              </span>
-            ))} */}
-          </span>
-        ))}
+
+        <iframe
+          src="https://cdn.battlemetrics.com/b/horizontal500x80px/34371654.html?foreground=%23ffffff&background=%23000000&lines=%23333333&linkColor=%23dba21c&chartColor=%23dba21c"
+          title="Reforger Member Server Status"
+          style={serverStatusStyle}
+          name="ixrqj"
+        ></iframe>
+        <iframe
+          src="https://cdn.battlemetrics.com/b/horizontal500x80px/37556304.html?foreground=%23ffffff&background=%23000000&lines=%23333333&linkColor=%23dba21c&chartColor=%23dba21c"
+          title="Reforger Public Server Status"
+          style={serverStatusStyle}
+          name="ixrqj"
+        ></iframe>
       </div>
     </section>
   );
