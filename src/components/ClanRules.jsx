@@ -79,7 +79,7 @@ const ClanRules = (props) => {
                 </a>
               </li>
               <li>Not use cheats or hacks.</li>
-              <li>Accuse others of cheating publicly.</li>
+              <li>Not accuse others of cheating publicly.</li>
               <li>Play and communicate as a cohesive unit.</li>
               <li>
                 Be approved by <b>Command.</b>
