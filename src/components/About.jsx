@@ -25,7 +25,7 @@ const About = (props) => {
           <br />
           <b>INF_Rhys</b> - 2IC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>INF_Mike64</b> - 3IC
         </p>
-         <h5>Teamspeak Activity</h5>
+         <h5>TeamSpeak Activity</h5>
           <div id="ts3viewer_1014112" className="ts-viewer"></div>
       </div>
     </section>

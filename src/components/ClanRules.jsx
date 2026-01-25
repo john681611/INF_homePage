@@ -69,7 +69,7 @@ const ClanRules = (props) => {
                 .
               </li>
               <li>
-                Use the <b>INF_</b> tag before their callsign on{" "}
+                Use the <b>INF_</b> tag before their call-sign on{" "}
                 <a
                   href="ts3server://ts3.iron-fists.co.uk"
                   target="_blank"
