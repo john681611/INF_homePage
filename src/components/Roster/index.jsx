@@ -13,7 +13,6 @@ const Roster = (props) => {
                 <tr>
                   <th>Name</th>
                   <th className="no-mobile">Position</th>
-                  <th>Role</th>
                   <th className="no-mobile">Enlisted</th>
                 </tr>
               </thead>
@@ -25,9 +24,6 @@ const Roster = (props) => {
                     </td>
                     <td className="no-mobile member-position">
                       {member.position.replace(squad.name, "").trim()}
-                    </td>
-                    <td className="member-role">
-                      {member.role}
                     </td>
                     <td className="no-mobile member-joined">
                       {member.joined}
