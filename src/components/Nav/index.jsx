@@ -59,7 +59,7 @@ const Nav = () => {
           </a>
         </li>
         <li>
-          <a className="page-scroll" href="/#Clan Rules">
+          <a className="page-scroll" href="/#clanRules">
             Clan Rules
           </a>
         </li>

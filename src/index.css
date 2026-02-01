@@ -661,7 +661,7 @@ input:checked + .nav__elements {
 .intro {
   height: 40vh;
   text-align: center;
-  background: url(./images/Intro2.png) no-repeat 35% top scroll;
+  background: url(./images/Intro.png) no-repeat 35% top scroll;
   filter: grayscale(0.3) brightness(0.9);
   box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
   background-size: cover;
@@ -748,14 +748,14 @@ input:checked + .nav__elements {
 
 @media (min-width: 768px) {
   .intro {
-    background-image: url(./images/Intro2.png);
+    background-image: url(./images/Intro.png);
     background-position: 37% 0;
   }
 }
 
 @media (min-width: 1280px) {
   .intro {
-    background-image: url(./images/Intro2.png);
+    background-image: url(./images/Intro.png);
     background-position: center 0;
   }
 }
@@ -775,6 +775,18 @@ input:checked + .nav__elements {
 @media (min-width: 1280px) {
   .intro img {
     width: 20%;
+  }
+}
+
+@media (min-width: 3440px) {
+  .intro img {
+    width: 15%;
+  }
+}
+
+@media (min-width: 3840px) {
+  .intro img {
+    width: 12%;
   }
 }
 
@@ -840,6 +852,7 @@ input:checked + .nav__elements {
 
 .section,
 .section-wide {
+  scroll-margin-top: 100px;
   padding: 1rem 0;
   background: no-repeat;
   background-attachment: fixed;

@@ -12,7 +12,7 @@ const About = (props) => {
         </p>
         <p>
           All Major Decisions are put to a squad vote. All members are listened
-          to rank is only used for tie breakers. Any member can volunteer to lead a mission or event.
+          to, rank is only used for tie breakers. Any member can volunteer to lead a mission or event.
         </p>
       <div>
       </div>
