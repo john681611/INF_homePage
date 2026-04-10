@@ -17,14 +17,16 @@ const About = (props) => {
       <div>
       </div>
         <h4>Leadership</h4>
-        <p>
-          For day to day running:
-          <br />
-          {/* Command structure style? */}
-          <b>INF_H@wKEYE</b> - Squad CO
-          <br />
-          <b>INF_Rhys</b> - 2IC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>INF_Mike64</b> - 3IC
-        </p>
+        <p>For day to day running:</p>
+        <div className="leadership">
+          <div className="leadership__row leadership__row--top">
+            <span><b>INF_H@wKEYE</b> - Squad CO</span>
+          </div>
+          <div className="leadership__row leadership__row--bottom">
+            <span><b>INF_Mike64</b> - 2IC</span>
+            <span><b>INF_Bangie</b> - 3IC</span>
+          </div>
+        </div>
          <h5>TeamSpeak Activity</h5>
           <div id="ts3viewer_1014112" className="ts-viewer"></div>
       </div>
