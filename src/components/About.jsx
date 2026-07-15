@@ -1,4 +1,5 @@
 import React from "react";
+import Activity from "./Activity";
 
 const About = (props) => {
   return (
@@ -27,8 +28,7 @@ const About = (props) => {
             <span><b>INF_Bangie</b> - 3IC</span>
           </div>
         </div>
-         <h5>TeamSpeak Activity</h5>
-          <div id="ts3viewer_1014112" className="ts-viewer"></div>
+         <Activity/>
       </div>
     </section>
   );

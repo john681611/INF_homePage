@@ -59,11 +59,11 @@ function App () {
         <About />
         <Join />
         <ClanRules />
+        <Servers/>
         {initialData && <News news={initialData.news} />}
         {initialData && <Roster members={initialData.members} squads={initialData.squads} />}
         {initialData && <Donations donators={initialData.donators} />}
         <Donate />
-        {initialData && <Servers servers={initialData.servers } />}
         <CMDmsg />
         <Footer />
       </HttpsRedirect>

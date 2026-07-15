@@ -48,8 +48,15 @@ hr {
 }
 
 pre {
-  font-family: Roboto, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family:
+    Roboto,
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
   font-size: 1em;
 }
 
@@ -74,8 +81,15 @@ strong {
 code,
 kbd,
 samp {
-  font-family: Roboto, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family:
+    Roboto,
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
   font-size: 1em;
 }
 
@@ -246,7 +260,8 @@ body {
 }
 
 body {
-  font-family: Roboto, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  font-family:
+    Roboto, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-feature-settings: normal;
   font-size: 24px;
@@ -281,7 +296,7 @@ h1 {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   h1 {
     font-size: 5rem;
     margin-bottom: 2rem;
@@ -292,7 +307,7 @@ h2 {
   font-size: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   h2 {
     font-size: 3rem;
   }
@@ -302,7 +317,7 @@ h3 {
   font-size: 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   h3 {
     font-size: 2.5rem;
   }
@@ -312,7 +327,7 @@ h4 {
   font-size: 1.3rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   h4 {
     font-size: 2rem;
   }
@@ -322,7 +337,7 @@ h5 {
   font-size: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   h5 {
     font-size: 1.5rem;
   }
@@ -375,7 +390,7 @@ button {
   background: rgba(0, 0, 0, 0);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .btn,
   button {
     min-width: 10rem;
@@ -389,7 +404,7 @@ button:last-of-type {
   margin-bottom: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .btn:last-of-type,
   button:last-of-type {
     margin-right: 0;
@@ -438,7 +453,7 @@ table thead th {
 
 table tbody td:first-child {
   font-weight: 600;
-  color: var(--color-gold)
+  color: var(--color-gold);
 }
 
 hr {
@@ -459,7 +474,7 @@ hr {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .no-mobile {
     display: none;
   }
@@ -472,7 +487,7 @@ hr {
   z-index: 1000;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav {
     background-color: rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid #333;
@@ -509,7 +524,7 @@ hr {
   background-color: #000;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav__container,
   .nav__elements {
     background-color: rgba(0, 0, 0, 0);
@@ -524,9 +539,12 @@ hr {
 .nav__container {
   padding: 1rem;
   border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav__container {
     padding: 0;
     border: 0;
@@ -541,10 +559,13 @@ hr {
 }
 
 .nav__container__menu-toggle {
-  float: right;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav__container__menu-toggle {
     display: none;
   }
@@ -565,7 +586,7 @@ hr {
   transition: max-height 0.4s ease-in;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav__elements {
     max-height: 1000px;
     padding: 0 1rem 0 0;
@@ -586,7 +607,7 @@ input:checked + .nav__elements {
   max-height: 1000px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav__elements li {
     display: inline-block;
     margin-right: 1rem;
@@ -597,7 +618,7 @@ input:checked + .nav__elements {
   padding-top: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav__elements li:first-child {
     padding: 0;
   }
@@ -607,7 +628,7 @@ input:checked + .nav__elements {
   padding-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav__elements li:last-child {
     padding: 0;
     margin: 0;
@@ -621,7 +642,7 @@ input:checked + .nav__elements {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav__elements a {
     margin: 0;
   }
@@ -640,7 +661,9 @@ input:checked + .nav__elements {
     transition: -webkit-transform 0.25s ease-in-out;
     -o-transition: transform 0.25s ease-in-out;
     transition: transform 0.25s ease-in-out;
-    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+    transition:
+      transform 0.25s ease-in-out,
+      -webkit-transform 0.25s ease-in-out;
   }
   .nav__elements a:hover {
     text-decoration: none;
@@ -710,9 +733,9 @@ input:checked + .nav__elements {
   }
 }
 
-@media (min-height: 768px) {
+@media (min-height: 800px) {
   .intro {
-    min-height: calc(768px - 5.2rem);
+    min-height: calc(800px - 5.2rem);
   }
 }
 
@@ -746,7 +769,7 @@ input:checked + .nav__elements {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .intro {
     background-image: url(./images/Intro.png);
     background-position: 37% 0;
@@ -766,7 +789,7 @@ input:checked + .nav__elements {
   margin: 10px auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .intro img {
     width: 30%;
   }
@@ -860,7 +883,7 @@ input:checked + .nav__elements {
   background-size: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .section {
     padding: 1rem 10%;
     width: 80%;
@@ -889,7 +912,7 @@ input:checked + .nav__elements {
   padding: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .section__inner {
     background-color: rgba(0, 0, 0, 0.8);
   }
@@ -906,7 +929,6 @@ input:checked + .nav__elements {
 .list li {
   padding: 1rem 0;
 }
-
 
 #roster {
   background-image: url(./images/Arma_moonlit.png);
@@ -939,7 +961,7 @@ input:checked + .nav__elements {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .news-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -974,7 +996,7 @@ input:checked + .nav__elements {
   border-bottom: 1px solid #333;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .requirements li {
     width: calc(33% - 2rem - 1px);
     border-right: 1px solid #333;
@@ -1018,7 +1040,7 @@ input:checked + .nav__elements {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .entry-step {
     width: calc(50% - 2rem - 1px);
     border-width: 0;
@@ -1040,13 +1062,13 @@ input:checked + .nav__elements {
   border-width: 0 0 1px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .entry-step:first-child {
     border-width: 0;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .entry-step:last-child {
     border-width: 1px 0 0;
     width: 100%;
@@ -1060,7 +1082,7 @@ input:checked + .nav__elements {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .entry-step:nth-child(2) {
     border-width: 0 0 0 1px;
   }
@@ -1099,7 +1121,7 @@ input:checked + .nav__elements {
   padding: 1rem 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .social__link {
     width: 33%;
     border-bottom: 0;
@@ -1121,7 +1143,7 @@ input:checked + .nav__elements {
   margin-top: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .cmd-message {
     text-align: justify;
     padding: 0 50px;
@@ -1155,7 +1177,7 @@ input:checked + .nav__elements {
   text-align: right;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .cmd-message__cmd {
     padding: 0 50px;
   }
@@ -1260,7 +1282,7 @@ iframe {
   grid-template-columns: 1fr;
   gap: 1rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -1292,7 +1314,7 @@ iframe {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .roster-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1328,7 +1350,7 @@ iframe {
   margin-bottom: 0.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .leadership__row--bottom {
     flex-direction: row;
     justify-content: center;

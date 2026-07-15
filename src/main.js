@@ -50,10 +50,4 @@ window.addEventListener('scroll', collapseNavbar);
 window.addEventListener('ready', collapseNavbar);
 
 
-// Closes the Responsive Menu on Menu Item Click
-const els = document.getElementsByClassName('page-scroll');
-Array.prototype.slice.call(els).forEach(function(el) {
-    el.addEventListener('click', function() {
-        document.getElementById('nav-menu').checked = false;
-    });
-});
+

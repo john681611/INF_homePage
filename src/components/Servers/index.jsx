@@ -1,6 +1,5 @@
-import React from "react";
 
-const serverStatusStyle = { border: 0, position: "relative", width: "100%", height: "100%", margin:"0 auto" };
+
 const Servers = (props) => {
   return (
     <section id="servers" className="section">
@@ -46,21 +45,6 @@ const Servers = (props) => {
         <p>
           <b>Play Fair and with Honour!</b>
         </p>
-
-        <h2>Servers</h2>
-
-        <iframe
-          src="https://cdn.battlemetrics.com/b/horizontal500x80px/34371654.html?foreground=%23ffffff&background=%23000000&lines=%23333333&linkColor=%23dba21c&chartColor=%23dba21c"
-          title="Reforger Member Server Status"
-          style={serverStatusStyle}
-          name="ixrqj"
-        ></iframe>
-        <iframe
-          src="https://cdn.battlemetrics.com/b/horizontal500x80px/37556304.html?foreground=%23ffffff&background=%23000000&lines=%23333333&linkColor=%23dba21c&chartColor=%23dba21c"
-          title="Reforger Public Server Status"
-          style={serverStatusStyle}
-          name="ixrqj"
-        ></iframe>
       </div>
     </section>
   );

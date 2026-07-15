@@ -1,9 +1,27 @@
-import React from "react";
+import { useState, useEffect, useRef } from "react";
 import InfSimpleLogo from "../../images/INF-simple-Logo2.svg";
 
 const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef(null);
+
+  const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [menuOpen]);
+
   return (
-    <nav className="nav">
+    <nav className="nav" ref={navRef}>
       <div className="nav__container">
         <a className="nav__container__logo" href="/#page-top">
           <img
@@ -27,15 +45,21 @@ const Nav = () => {
         </label>
       </div>
 
-      <input type="checkbox" className="a11y" id="nav-menu" />
+      <input
+        type="checkbox"
+        className="a11y"
+        id="nav-menu"
+        checked={menuOpen}
+        onChange={(e) => setMenuOpen(e.target.checked)}
+      />
       <ul className="nav__elements">
         <li>
-          <a className="page-scroll" href="/#about">
+          <a className="page-scroll" href="/#about" onClick={closeMenu}>
             About
           </a>
         </li>
         <li>
-          <a className="page-scroll" href="/#join">
+          <a className="page-scroll" href="/#join" onClick={closeMenu}>
             Join
           </a>
         </li>
@@ -45,6 +69,7 @@ const Nav = () => {
             target="_blank"
             href="https://discord.gg/sAjVrD3fS2"
             rel="noreferrer"
+            onClick={closeMenu}
           >
             Discord
           </a>
@@ -54,33 +79,34 @@ const Nav = () => {
             href="ts3server://ts3.iron-fists.co.uk"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={closeMenu}
           >
             TeamSpeak
           </a>
         </li>
         <li>
-          <a className="page-scroll" href="/#clanRules">
+          <a className="page-scroll" href="/#clanRules" onClick={closeMenu}>
             Clan Rules
           </a>
         </li>
         <li>
-          <a className="page-scroll" href="/#news">
+          <a className="page-scroll" href="/#servers" onClick={closeMenu}>
+            Server Rules
+          </a>
+        </li>
+        <li>
+          <a className="page-scroll" href="/#news" onClick={closeMenu}>
             News
           </a>
         </li>
         <li>
-          <a className="page-scroll" href="/#roster">
+          <a className="page-scroll" href="/#roster" onClick={closeMenu}>
             Roster
           </a>
         </li>
         <li>
-          <a className="page-scroll" href="/#donate">
+          <a className="page-scroll" href="/#donate" onClick={closeMenu}>
             Donate
-          </a>
-        </li>
-        <li>
-          <a className="page-scroll" href="/#servers">
-            Servers
           </a>
         </li>
       </ul>
