@@ -1203,17 +1203,6 @@ input:checked + .nav__elements {
   margin-bottom: 0;
 }
 
-iframe {
-  background-image: url(./images/logo-desktop.png);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  border: none;
-}
-
 .small-note {
   margin: 0;
   font-size: 0.75rem;

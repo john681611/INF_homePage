@@ -1,9 +1,18 @@
 const serverStatusStyle = {
   border: 0,
-  margin: "0 auto",
-  minWidth: "15vw",
+  display: "block",
+  flex: "0 0 auto",
 };
-const Activity = (props) => {
+
+const serverStatusContainerStyle = {
+  display: "flex",
+  flexWrap: "wrap",
+  gap: "1rem",
+  alignItems: "flex-start",
+  justifyContent: "center",
+};
+
+const Activity = () => {
   return (
     <>
       <div>
@@ -12,21 +21,25 @@ const Activity = (props) => {
       </div>
       <div>
         <h5>Servers</h5>
-        <div>
-            <a href="https://www.battlemetrics.com/servers/reforger/34371654">
-          <img
-            src="https://cdn.battlemetrics.com/b/standardVertical/34371654.png?foreground=%23ffffff&background=%23000000&lines=%23333333&linkColor=%23dba21c&chartColor=%23dba21c&chart=players%3A7D&showPlayers=&maxPlayersHeight=40"
-            alt="Reforger Member Server Status"
+        <div style={serverStatusContainerStyle}>
+          <iframe
+            src="https://cdn.battlemetrics.com/b/standardVertical/34371654.html?foreground=%23ffffff&background=%23000000&lines=%23333333&linkColor=%23dba21c&chartColor=%23dba21c&chart=players%3A7D&showPlayers=&maxPlayersHeight=40&_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Imhvcml6b250YWw1MDB4ODBweCIsInNlcnZlciI6MzQzNzE2NTQsIm9wdGlvbnMiOnsiZm9yZWdyb3VuZCI6IiNFRUVFRUUiLCJiYWNrZ3JvdW5kIjoiIzIyMjIyMiIsImxpbmVzIjoiIzMzMzMzMyIsImxpbmtDb2xvciI6IiMxMTg1ZWMiLCJjaGFydENvbG9yIjoiI0ZGMDcwMCJ9LCJsaXZlVXBkYXRlcyI6dHJ1ZSwidXNlcl9pZCI6MTIyMDI5OCwiaWF0IjoxNzg0MzAxOTM0fQ.FXhGoKLYJlD24cPGzrYGpWD8_sIlnb-rVSsTrmdObcQ"
+            frameBorder="0"
             style={serverStatusStyle}
-          />
-          </a>
-          <a href="https://www.battlemetrics.com/servers/reforger/37966997">
-          <img
-            src="https://cdn.battlemetrics.com/b/standardVertical/37966997.png?foreground=%23ffffff&background=%23000000&lines=%23333333&linkColor=%23dba21c&chartColor=%23dba21c&chart=players%3A7D&showPlayers=&maxPlayersHeight=40"
-            alt="Reforger Public Server Status"
+            name="azrqo"
+            data-scale="1.2"
+            data-size-group="server-status"
+            title="Reforger Member Server Status"
+          ></iframe>
+          <iframe
+            src="https://cdn.battlemetrics.com/b/standardVertical/37966997.html?&_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Imhvcml6b250YWw1MDB4ODBweCIsInNlcnZlciI6Mzc5NjY5OTcsIm9wdGlvbnMiOnsiZm9yZWdyb3VuZCI6IiNFRUVFRUUiLCJiYWNrZ3JvdW5kIjoiIzIyMjIyMiIsImxpbmVzIjoiIzMzMzMzMyIsImxpbmtDb2xvciI6IiMxMTg1ZWMiLCJjaGFydENvbG9yIjoiI0ZGMDcwMCJ9LCJsaXZlVXBkYXRlcyI6dHJ1ZSwidXNlcl9pZCI6MTIyMDI5OCwiaWF0IjoxNzg0MzAxNjQzfQ.ndDoMOwn59ozQm8kE-EOagfT0fj-RdP4miHKLGj1FxU&foreground=%23ffffff&background=%23000000&lines=%23333333&linkColor=%23dba21c&chartColor=%23dba21c&chart=players%3A7D&showPlayers=&maxPlayersHeight=40"
+            frameBorder="0"
             style={serverStatusStyle}
-          />
-          </a>
+            name="kvice"
+            data-scale="1.2"
+            data-size-group="server-status"
+            title="Reforger Public Server Status"
+          ></iframe>
         </div>
       </div>
     </>
@@ -34,4 +47,3 @@ const Activity = (props) => {
 };
 
 export default Activity;
-//https://cdn.battlemetrics.com/b/standardVertical/37966997.png?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A7D&chartColor=%23FF0700&showPlayers=&maxPlayersHeight=40
