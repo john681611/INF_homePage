@@ -23,7 +23,7 @@ const Activity = () => {
         <h5>Servers</h5>
         <div style={serverStatusContainerStyle}>
           <iframe
-            src="https://cdn.battlemetrics.com/b/standardVertical/34371654.html?foreground=%23ffffff&background=%23000000&lines=%23333333&linkColor=%23dba21c&chartColor=%23dba21c&chart=players%3A7D&showPlayers=&maxPlayersHeight=40&_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Imhvcml6b250YWw1MDB4ODBweCIsInNlcnZlciI6MzQzNzE2NTQsIm9wdGlvbnMiOnsiZm9yZWdyb3VuZCI6IiNFRUVFRUUiLCJiYWNrZ3JvdW5kIjoiIzIyMjIyMiIsImxpbmVzIjoiIzMzMzMzMyIsImxpbmtDb2xvciI6IiMxMTg1ZWMiLCJjaGFydENvbG9yIjoiI0ZGMDcwMCJ9LCJsaXZlVXBkYXRlcyI6dHJ1ZSwidXNlcl9pZCI6MTIyMDI5OCwiaWF0IjoxNzg0MzAxOTM0fQ.FXhGoKLYJlD24cPGzrYGpWD8_sIlnb-rVSsTrmdObcQ"
+            src="https://cdn.battlemetrics.com/b/standardVertical/34371654.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InN0YW5kYXJkVmVydGljYWwiLCJzZXJ2ZXIiOjM0MzcxNjU0LCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjZmZmZmZmIiwibGlua0NvbG9yIjoiI2RiYTIxYyIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMDAwMDAwIiwiY2hhcnQiOiJwbGF5ZXJzOjdEIiwiY2hhcnRDb2xvciI6IiNkYmEyMWMiLCJtYXhQbGF5ZXJzSGVpZ2h0IjoiMzAwIn0sImxpdmVVcGRhdGVzIjp0cnVlLCJ1c2VyX2lkIjoxMjIwMjk4LCJpYXQiOjE3ODQ0MDg3MDR9.60CP6mAb5eTVJs-QQyrAor5h_E0afLqY-QWffKE31rg"
             frameBorder="0"
             style={serverStatusStyle}
             name="azrqo"
@@ -32,7 +32,7 @@ const Activity = () => {
             title="Reforger Member Server Status"
           ></iframe>
           <iframe
-            src="https://cdn.battlemetrics.com/b/standardVertical/37966997.html?&_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Imhvcml6b250YWw1MDB4ODBweCIsInNlcnZlciI6Mzc5NjY5OTcsIm9wdGlvbnMiOnsiZm9yZWdyb3VuZCI6IiNFRUVFRUUiLCJiYWNrZ3JvdW5kIjoiIzIyMjIyMiIsImxpbmVzIjoiIzMzMzMzMyIsImxpbmtDb2xvciI6IiMxMTg1ZWMiLCJjaGFydENvbG9yIjoiI0ZGMDcwMCJ9LCJsaXZlVXBkYXRlcyI6dHJ1ZSwidXNlcl9pZCI6MTIyMDI5OCwiaWF0IjoxNzg0MzAxNjQzfQ.ndDoMOwn59ozQm8kE-EOagfT0fj-RdP4miHKLGj1FxU&foreground=%23ffffff&background=%23000000&lines=%23333333&linkColor=%23dba21c&chartColor=%23dba21c&chart=players%3A7D&showPlayers=&maxPlayersHeight=40"
+            src="https://cdn.battlemetrics.com/b/standardVertical/37966997.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InN0YW5kYXJkVmVydGljYWwiLCJzZXJ2ZXIiOjM3OTY2OTk3LCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjZmZmZmZmIiwibGlua0NvbG9yIjoiI2RiYTIxYyIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMDAwMDAwIiwiY2hhcnQiOiJwbGF5ZXJzOjdEIiwiY2hhcnRDb2xvciI6IiNkYmEyMWMiLCJtYXhQbGF5ZXJzSGVpZ2h0IjoiMzAwIn0sImxpdmVVcGRhdGVzIjp0cnVlLCJ1c2VyX2lkIjoxMjIwMjk4LCJpYXQiOjE3ODQ0MDg1NDN9.xuqvT85ZSI2oIb36OlDvG8wzPSrWL7b4cdbacpYBR5w"
             frameBorder="0"
             style={serverStatusStyle}
             name="kvice"
