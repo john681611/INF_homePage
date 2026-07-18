@@ -11,7 +11,7 @@ const Donate = (props) => {
         </p>
         <a
           className="btn"
-          href="https://iron-fists.co.uk/forums/app.php/donate"
+          href="https://www.paypal.com/ncp/payment/YXKH454DLF94A"
           target="_blank"
           rel="noopener noreferrer"
         >
