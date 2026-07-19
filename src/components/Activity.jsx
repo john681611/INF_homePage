@@ -23,7 +23,7 @@ const Activity = () => {
         <h5>Servers</h5>
         <div style={serverStatusContainerStyle}>
           <iframe
-            src="https://cdn.battlemetrics.com/b/standardVertical/34371654.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InN0YW5kYXJkVmVydGljYWwiLCJzZXJ2ZXIiOjM0MzcxNjU0LCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjZmZmZmZmIiwibGlua0NvbG9yIjoiI2RiYTIxYyIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMDAwMDAwIiwiY2hhcnQiOiJwbGF5ZXJzOjdEIiwiY2hhcnRDb2xvciI6IiNkYmEyMWMiLCJtYXhQbGF5ZXJzSGVpZ2h0IjoiMzAwIn0sImxpdmVVcGRhdGVzIjp0cnVlLCJ1c2VyX2lkIjoxMjIwMjk4LCJpYXQiOjE3ODQ0MDg3MDR9.60CP6mAb5eTVJs-QQyrAor5h_E0afLqY-QWffKE31rg"
+            src="https://cdn.battlemetrics.com/b/rEwsieVUl/34371654.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MzUiLCJzZXJ2ZXIiOjM0MzcxNjU0LCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjZmZmZmZmIiwibGlua0NvbG9yIjoiI2RiYTIxYyIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMjIyMjIyIiwiY2hhcnQiOiJwbGF5ZXJzOlJUIiwiY2hhcnRDb2xvciI6IiNkYmEyMWMiLCJzaG93UGxheWVycyI6IjEiLCJtYXhQbGF5ZXJzSGVpZ2h0IjoiMzAwIn0sImxpdmVVcGRhdGVzIjp0cnVlLCJ1c2VyX2lkIjoxMjIwMjk4LCJpYXQiOjE3ODQ0NjA5NzZ9.nJZOrHNcafoVw5SW86S_rVMTYEXr1vJDVALJNrmPKGE"
             frameBorder="0"
             style={serverStatusStyle}
             name="azrqo"
@@ -32,7 +32,7 @@ const Activity = () => {
             title="Reforger Member Server Status"
           ></iframe>
           <iframe
-            src="https://cdn.battlemetrics.com/b/standardVertical/37966997.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InN0YW5kYXJkVmVydGljYWwiLCJzZXJ2ZXIiOjM3OTY2OTk3LCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjZmZmZmZmIiwibGlua0NvbG9yIjoiI2RiYTIxYyIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMDAwMDAwIiwiY2hhcnQiOiJwbGF5ZXJzOjdEIiwiY2hhcnRDb2xvciI6IiNkYmEyMWMiLCJtYXhQbGF5ZXJzSGVpZ2h0IjoiMzAwIn0sImxpdmVVcGRhdGVzIjp0cnVlLCJ1c2VyX2lkIjoxMjIwMjk4LCJpYXQiOjE3ODQ0MDg1NDN9.xuqvT85ZSI2oIb36OlDvG8wzPSrWL7b4cdbacpYBR5w"
+            src="https://cdn.battlemetrics.com/b/rEwsieVUl/37966997.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MzUiLCJzZXJ2ZXIiOjM3OTY2OTk3LCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjZmZmZmZmIiwibGlua0NvbG9yIjoiI2RiYTIxYyIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMDAwMDAwIiwiY2hhcnQiOiJwbGF5ZXJzOlJUIiwiY2hhcnRDb2xvciI6IiNkYmEyMWMiLCJzaG93UGxheWVycyI6IjEiLCJtYXhQbGF5ZXJzSGVpZ2h0IjoiMzAwIn0sImxpdmVVcGRhdGVzIjp0cnVlLCJ1c2VyX2lkIjoxMjIwMjk4LCJpYXQiOjE3ODQ0NjEyOTZ9.WsLLz86SlAk8vq-Bxv0Sz1iWFrG_fSVdspe1YXYOX5o"
             frameBorder="0"
             style={serverStatusStyle}
             name="kvice"
