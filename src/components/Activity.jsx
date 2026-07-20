@@ -23,7 +23,7 @@ const Activity = () => {
         <h5>Servers</h5>
         <div style={serverStatusContainerStyle}>
           <iframe
-            src="https://cdn.battlemetrics.com/b/rEwsieVUl/34371654.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MzUiLCJzZXJ2ZXIiOjM0MzcxNjU0LCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjZmZmZmZmIiwibGlua0NvbG9yIjoiI2RiYTIxYyIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMjIyMjIyIiwiY2hhcnQiOiJwbGF5ZXJzOlJUIiwiY2hhcnRDb2xvciI6IiNkYmEyMWMiLCJzaG93UGxheWVycyI6IjEiLCJtYXhQbGF5ZXJzSGVpZ2h0IjoiMzAwIn0sImxpdmVVcGRhdGVzIjp0cnVlLCJ1c2VyX2lkIjoxMjIwMjk4LCJpYXQiOjE3ODQ0NjA5NzZ9.nJZOrHNcafoVw5SW86S_rVMTYEXr1vJDVALJNrmPKGE"
+            src="https://cdn.battlemetrics.com/b/rEwsieVUl/34371654.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MzUiLCJzZXJ2ZXIiOjM0MzcxNjU0LCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjZmZmZmZmIiwibGlua0NvbG9yIjoiI2RiYTIxYyIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMDAwMDAwIiwiY2hhcnQiOiJwbGF5ZXJzOlJUIiwiY2hhcnRDb2xvciI6IiNkYmEyMWMiLCJzaG93UGxheWVycyI6IjEiLCJtYXhQbGF5ZXJzSGVpZ2h0IjoiMzAwIn0sImxpdmVVcGRhdGVzIjp0cnVlLCJ1c2VyX2lkIjoxMjIwMjk4LCJpYXQiOjE3ODQ1MDM2ODh9.iYdgO3EXfxE_R3g7lKPnkQAh41Cn9pkGR73_pIkasSw"
             frameBorder="0"
             style={serverStatusStyle}
             name="azrqo"
