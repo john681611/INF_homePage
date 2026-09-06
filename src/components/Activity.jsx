@@ -1,8 +1,3 @@
-const serverStatusStyle = {
-  border: 0,
-  display: "block",
-  flex: "0 0 auto",
-};
 
 const serverStatusContainerStyle = {
   display: "flex",
@@ -22,24 +17,8 @@ const Activity = () => {
       <div>
         <h5>Servers</h5>
         <div style={serverStatusContainerStyle}>
-          <iframe
-            src="https://cdn.battlemetrics.com/b/rEwsieVUl/34371654.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MzUiLCJzZXJ2ZXIiOjM0MzcxNjU0LCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjZmZmZmZmIiwibGlua0NvbG9yIjoiI2RiYTIxYyIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMDAwMDAwIiwiY2hhcnQiOiJwbGF5ZXJzOlJUIiwiY2hhcnRDb2xvciI6IiNkYmEyMWMiLCJzaG93UGxheWVycyI6IjEiLCJtYXhQbGF5ZXJzSGVpZ2h0IjoiMzAwIn0sImxpdmVVcGRhdGVzIjp0cnVlLCJ1c2VyX2lkIjoxMjIwMjk4LCJpYXQiOjE3ODQ1MDM2ODh9.iYdgO3EXfxE_R3g7lKPnkQAh41Cn9pkGR73_pIkasSw"
-            frameBorder="0"
-            style={serverStatusStyle}
-            name="azrqo"
-            data-scale="1.2"
-            data-size-group="server-status"
-            title="Reforger Member Server Status"
-          ></iframe>
-          <iframe
-            src="https://cdn.battlemetrics.com/b/rEwsieVUl/37966997.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3MzUiLCJzZXJ2ZXIiOjM3OTY2OTk3LCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjZmZmZmZmIiwibGlua0NvbG9yIjoiI2RiYTIxYyIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMDAwMDAwIiwiY2hhcnQiOiJwbGF5ZXJzOlJUIiwiY2hhcnRDb2xvciI6IiNkYmEyMWMiLCJzaG93UGxheWVycyI6IjEiLCJtYXhQbGF5ZXJzSGVpZ2h0IjoiMzAwIn0sImxpdmVVcGRhdGVzIjp0cnVlLCJ1c2VyX2lkIjoxMjIwMjk4LCJpYXQiOjE3ODQ0NjEyOTZ9.WsLLz86SlAk8vq-Bxv0Sz1iWFrG_fSVdspe1YXYOX5o"
-            frameBorder="0"
-            style={serverStatusStyle}
-            name="kvice"
-            data-scale="1.2"
-            data-size-group="server-status"
-            title="Reforger Public Server Status"
-          ></iframe>
+          <img src="https://cdn.battlemetrics.com/b/standardVertical/34371654.png?foreground=%23ffffff&linkColor=%23dba21c&lines=%23333333&background=%23000000&chart=players%3A24H&chartColor=%23dba21c&showPlayers=1&maxPlayersHeight=300" />
+          <img src="https://cdn.battlemetrics.com/b/standardVertical/37966997.png?foreground=%23ffffff&linkColor=%23dba21c&lines=%23333333&background=%23000000&chart=players%3A24H&chartColor=%23dba21c&showPlayers=1&maxPlayersHeight=300" />
         </div>
       </div>
     </>
